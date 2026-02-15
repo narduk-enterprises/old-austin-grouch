@@ -1,0 +1,208 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+/* ── Smooth scroll (respects reduced motion) ──────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Brand-coherent text selection ────────────────────────── */
+::selection {
+  background: rgba(245, 158, 11, 0.25);
+  color: inherit;
+}
+
+:is(.dark) ::selection {
+  background: rgba(245, 158, 11, 0.35);
+}
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* ── Warm paper texture background ────────────────────────── */
+.paper-texture {
+  background-color: #faf7f2;
+  background-image:
+    radial-gradient(circle at 20% 35%, rgba(120, 80, 40, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 75% 44%, rgba(120, 80, 40, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 46% 72%, rgba(140, 100, 50, 0.035) 1px, transparent 1px);
+  background-size:
+    7px 7px,
+    11px 11px,
+    5px 5px;
+}
+
+:is(.dark) .paper-texture {
+  background-color: #1c1917;
+  background-image:
+    radial-gradient(circle at 20% 35%, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    radial-gradient(circle at 75% 44%, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    radial-gradient(circle at 46% 72%, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size:
+    7px 7px,
+    11px 11px,
+    5px 5px;
+}
+
+/* ── Halftone grain overlay ───────────────────────────────── */
+.grain-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Card stagger entrance ─────────────────────────────────── */
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-card-enter {
+  animation: card-enter 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* ── Fade up ──────────────────────────────────────────────── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.6s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fade-up 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+/* ── Page transitions ──────────────────────────────────────── */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* ── Prose styling for markdown content ───────────────────── */
+.prose {
+  max-width: 65ch;
+  line-height: 1.8;
+}
+
+.prose h2 {
+  font-family: var(--font-display);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose h3 {
+  font-family: var(--font-display);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+}
+
+.prose ul,
+.prose ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--ui-primary);
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+  color: var(--ui-text-muted);
+}
+
+.prose a {
+  color: var(--ui-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose a:hover {
+  color: var(--ui-primary);
+  opacity: 0.8;
+}
+
+/* ── Accessibility ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--ui-primary);
+  outline-offset: 2px;
+}

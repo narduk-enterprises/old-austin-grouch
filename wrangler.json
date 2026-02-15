@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/schemas/config/wrangler.json",
+  "name": "old-austin-grouch",
+  "main": ".output/server/index.mjs",
+  "assets": {
+    "directory": ".output/public/"
+  },
+  "compatibility_date": "2025-02-15",
+  "compatibility_flags": [
+    "nodejs_compat_v2"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "old-austin-grouch",
+      "database_id": "placeholder-create-with-wrangler-d1-create"
+    }
+  ]
+}
