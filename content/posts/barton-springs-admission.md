@@ -1,6 +1,6 @@
 ---
 title: "Barton Springs Admission: The Price of Cold Water and Civic Identity"
-date: "2024-05-14"
+date: "2025-06-05"
 series: "things-that-used-to-cost-three-dollars"
 tags: ["prices", "nostalgia", "barton-springs", "swimming", "city-parks"]
 excerpt: "Barton Springs was free, then $3, then $5, then $9. The water stayed the same. We didn't."

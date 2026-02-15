@@ -1,12 +1,12 @@
 ---
-title: "Liberty Lunch: A Ghost Story in Three Chords"
-date: "2024-03-12"
-series: "lost-venues-and-dive-bars"
-tags: ["music", "venues", "liberty-lunch", "downtown", "90s"]
-excerpt: "They tore it down in 1999 and put up a office building. The bass notes are still in the soil."
-heroImage: "/img/og/liberty-lunch-ghost-story.png"
-ogImage: "/img/og/liberty-lunch-ghost-story.png"
-readingTime: "5 min read"
+title: 'Liberty Lunch: A Ghost Story in Three Chords'
+date: '2025-05-10'
+series: 'lost-venues-and-dive-bars'
+tags: ['music', 'venues', 'liberty-lunch', 'downtown', '90s']
+excerpt: 'They tore it down in 1999 and put up an office building. The bass notes are still in the soil.'
+heroImage: '/img/og/liberty-lunch-ghost-story.png'
+ogImage: '/img/og/liberty-lunch-ghost-story.png'
+readingTime: '5 min read'
 shareLine: "Liberty Lunch didn't have a brand. It had a corrugated metal roof and the best sound in Texas."
 ---
 
@@ -22,7 +22,7 @@ Here's what you need to understand about Liberty Lunch:
 
 - The capacity was roughly 1,000, but it felt smaller because the stage was low and the crowd was close and the whole place operated on the principle that music should be a contact sport.
 - There was no VIP section. There was no bottle service. There was a bar that served [Lone Star and Shiner](/posts/lone-star-at-the-bar) and if you wanted something fancier than that, you could go somewhere else — and plenty of somewhere elses have since been built on every adjacent block.
-- The outdoor area was just *outside*. Not a curated patio. Not a biergarten concept. Just Texas sky and cigarette smoke and the sound of the next band warming up through the walls.
+- The outdoor area was just _outside_. Not a curated patio. Not a biergarten concept. Just Texas sky and cigarette smoke and the sound of the next band warming up through the walls.
 
 They tore it down to build a City of Austin office complex. A municipal building. The kind of place where people schedule meetings about parking meters. If that isn't the most efficient metaphor for what happened to this city, we don't know what is.
 

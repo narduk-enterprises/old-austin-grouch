@@ -1,6 +1,6 @@
 ---
 title: "The SXSW Porta-Potty Census: What 1,200 Plastic Toilets Say About Late Capitalism"
-date: "2024-10-17"
+date: "2025-09-08"
 series: "sxsw-ruin-counter"
 tags: ["sxsw", "festivals", "infrastructure", "sanitation", "priorities"]
 excerpt: "We counted the porta-potties so you don't have to. The findings are damning and poorly ventilated."

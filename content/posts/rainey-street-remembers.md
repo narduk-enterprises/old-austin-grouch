@@ -1,6 +1,6 @@
 ---
 title: "Rainey Street Remembers"
-date: "2024-11-22"
+date: "2025-09-22"
 series: "condos-of-shame"
 tags: ["development", "gentrification", "rainey-street", "downtown"]
 excerpt: "Rainey Street used to be a quiet block of house-bars where you could drink a Lone Star on a porch. Now the porches are in the shadows of 40-story towers."

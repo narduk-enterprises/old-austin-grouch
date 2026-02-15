@@ -1,6 +1,6 @@
 ---
 title: "Tech Bro of the Week: The Guy Putting Breakfast Tacos on the Blockchain"
-date: "2025-01-14"
+date: "2025-11-03"
 series: "tech-bro-of-the-week"
 tags: ["tech", "satire", "breakfast-tacos", "blockchain", "web3"]
 excerpt: "Meet Chadwick, who thinks the real problem with breakfast tacos is that they lack a decentralized ledger."

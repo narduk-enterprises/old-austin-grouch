@@ -1,12 +1,12 @@
 ---
-title: "The SXSW Free Stuff Quality Index: A Decline Measured in Koozies"
-date: "2025-01-22"
-series: "sxsw-ruin-counter"
-tags: ["sxsw", "festivals", "swag", "freebies", "corporate"]
+title: 'The SXSW Free Stuff Quality Index: A Decline Measured in Koozies'
+date: '2025-11-17'
+series: 'sxsw-ruin-counter'
+tags: ['sxsw', 'festivals', 'swag', 'freebies', 'corporate']
 excerpt: "The free stuff used to be good. Then it was fine. Now it's a QR code printed on a napkin."
-heroImage: "/img/og/sxsw-free-stuff-quality-index.png"
-ogImage: "/img/og/sxsw-free-stuff-quality-index.png"
-readingTime: "4 min read"
+heroImage: '/img/og/sxsw-free-stuff-quality-index.png'
+ogImage: '/img/og/sxsw-free-stuff-quality-index.png'
+readingTime: '4 min read'
 shareLine: "In 2007, SXSW gave me a free iPod Shuffle. In 2024, SXSW gave me a sticker that said 'future-forward' and a coupon for 10% off a meditation app."
 ---
 
@@ -40,7 +40,7 @@ The swag bag itself — once a sturdy vessel of corporate generosity — is now 
 
 ## What Happened?
 
-Two things. First, companies realized that giving away good stuff to 50,000 people is expensive, and "brand awareness" is easier to measure through app downloads than through how many people are wearing your free hat. Second — and this is the part nobody says out loud — the attendees changed. The people at SXSW in 2007 were bloggers, musicians, and mid-level tech workers who genuinely needed a free USB drive. The people at SXSW in 2025 are VPs of Strategy who expense $22 cocktails and do not need your koozie. The incentive structure collapsed.
+Two things. First, companies realized that giving away good stuff to 50,000 people is expensive, and "brand awareness" is easier to measure through app downloads than through how many people are wearing your free hat. Second — and this is the part nobody says out loud — the attendees changed. The people at SXSW in 2007 were bloggers, musicians, and mid-level tech workers who genuinely needed a free USB drive. The people at SXSW in 2026 are VPs of Strategy who expense $22 cocktails and do not need your koozie. The incentive structure collapsed.
 
 Much like how [breakfast tacos went from three dollars to a blockchain concept](/posts/blockchain-breakfast-taco), the SXSW freebie evolved past the point of being useful to the people who actually wanted it.
 

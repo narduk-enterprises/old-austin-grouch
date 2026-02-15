@@ -1,13 +1,13 @@
 ---
-title: "The SXSW Corporate Takeover Tracker: Block by Block, Brand by Brand"
-date: "2025-02-07"
-series: "sxsw-ruin-counter"
-tags: ["sxsw", "festivals", "corporate", "sponsorship", "downtown"]
-excerpt: "We mapped every corporate activation zone in downtown Austin during SXSW. It took three days and most of our will to live."
-heroImage: "/img/og/sxsw-corporate-takeover-tracker.png"
-ogImage: "/img/og/sxsw-corporate-takeover-tracker.png"
-readingTime: "5 min read"
-shareLine: "SXSW 2024 had more corporate activation zones than public restrooms. Somewhere, a banjo player weeps into his kombucha."
+title: 'The SXSW Corporate Takeover Tracker: Block by Block, Brand by Brand'
+date: '2025-12-15'
+series: 'sxsw-ruin-counter'
+tags: ['sxsw', 'festivals', 'corporate', 'sponsorship', 'downtown']
+excerpt: 'We mapped every corporate activation zone in downtown Austin during SXSW. It took three days and most of our will to live.'
+heroImage: '/img/og/sxsw-corporate-takeover-tracker.png'
+ogImage: '/img/og/sxsw-corporate-takeover-tracker.png'
+readingTime: '5 min read'
+shareLine: 'SXSW 2025 had more corporate activation zones than public restrooms. Somewhere, a banjo player weeps into his kombucha.'
 ---
 
 Here is a true thing that happened in March 2024: I tried to walk from the Austin Convention Center to a taco truck on East 4th Street — a distance of roughly six blocks — and I passed through the sovereign marketing territory of Amazon, Meta, Porsche, Delta Airlines, and a sparkling water brand whose name I've already suppressed as a psychological defense mechanism. Each one had erected a temporary structure. Each one had a line. Each one required a badge scan, a waiver, or both. The taco truck had closed. It had been replaced by a "Culinary Innovation Pop-Up" sponsored by a meal-kit delivery service.
@@ -20,7 +20,7 @@ We've been tracking SXSW's corporate footprint since 2018, and the growth patter
 
 **2018**: Corporate activations occupied roughly 8 city blocks, mostly clustered around the Convention Center and Rainey Street. The rest of downtown remained navigable. You could still find a bar that was just a bar — no wristband, no activation code, no branded photo booth. Just [a Lone Star and a jukebox](/posts/lone-star-at-the-bar).
 
-**2021**: Post-pandemic SXSW returned smaller but *hungrier*. The brands that showed up had something to prove, and what they proved was that they could turn a parking garage into a "Web3 Wellness Lounge" in under 72 hours. The footprint jumped to 14 blocks.
+**2021**: Post-pandemic SXSW returned smaller but _hungrier_. The brands that showed up had something to prove, and what they proved was that they could turn a parking garage into a "Web3 Wellness Lounge" in under 72 hours. The footprint jumped to 14 blocks.
 
 **2024**: We counted 23 distinct corporate activation zones spanning from Cesar Chavez to 8th Street, Congress to I-35. Nearly every available lot, warehouse shell, and former dive bar had been leased for a temporary branded experience. The highlights — or lowlights — included:
 

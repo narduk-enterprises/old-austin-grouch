@@ -1,6 +1,6 @@
 ---
 title: "Tech Bro of the Week: The Man Who Moved from SF to Reinvent the Kolache"
-date: "2025-03-25"
+date: "2026-01-22"
 series: "tech-bro-of-the-week"
 tags: ["tech", "satire", "kolaches", "san-francisco", "food"]
 excerpt: "He's never been to West, Texas. He has opinions about lamination."

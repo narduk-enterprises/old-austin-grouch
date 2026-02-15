@@ -1,6 +1,6 @@
 ---
 title: "The Armadillo World Headquarters: Where Austin Became Austin"
-date: "2024-12-03"
+date: "2025-10-06"
 series: "lost-venues-and-dive-bars"
 tags: ["music", "venues", "armadillo-world-headquarters", "70s", "willie-nelson"]
 excerpt: "Before it was a parking lot and then a high-rise, it was the room where rednecks and hippies decided to get along."

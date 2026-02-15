@@ -1,12 +1,12 @@
 ---
-title: "Hole in the Wall: Still Here, Still Holy"
-date: "2024-06-08"
-series: "lost-venues-and-dive-bars"
-tags: ["music", "venues", "hole-in-the-wall", "the-drag", "ut"]
+title: 'Hole in the Wall: Still Here, Still Holy'
+date: '2025-06-18'
+series: 'lost-venues-and-dive-bars'
+tags: ['music', 'venues', 'hole-in-the-wall', 'the-drag', 'ut']
 excerpt: "It's survived everything Austin has thrown at it, which at this point is basically a siege."
-heroImage: "/img/og/the-hole-in-the-wall-legacy.png"
-ogImage: "/img/og/the-hole-in-the-wall-legacy.png"
-readingTime: "4 min read"
+heroImage: '/img/og/the-hole-in-the-wall-legacy.png'
+ogImage: '/img/og/the-hole-in-the-wall-legacy.png'
+readingTime: '4 min read'
 shareLine: "The Hole in the Wall doesn't need a renovation. It needs a monument."
 ---
 
@@ -16,7 +16,7 @@ The Hole in the Wall doesn't need a renovation. It needs a monument.
 
 This is the bar where Stevie Ray Vaughan played early sets. Where Doug Sahm held court. Where Nanci Griffith and Lucinda Williams and Townes Van Zandt all stood on a stage roughly the size of a parking space and played music that would outlive every luxury apartment tower visible from the front door. The room is small. The ceiling is low. The floor is the kind of sticky that archaeologists will one day study.
 
-It's also the bar where, on any given Wednesday night in 2024, you can see a band you've never heard of play a set that makes you remember why you cared about live music in the first place. That hasn't changed. That's the miracle.
+It's also the bar where, on any given Wednesday night in 2025, you can see a band you've never heard of play a set that makes you remember why you cared about live music in the first place. That hasn't changed. That's the miracle.
 
 Here's what makes the Hole in the Wall sacred:
 

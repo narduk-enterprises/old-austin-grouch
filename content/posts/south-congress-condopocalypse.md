@@ -1,16 +1,16 @@
 ---
-title: "The South Congress Condopocalypse"
-date: "2025-02-12"
-series: "condos-of-shame"
-tags: ["development", "gentrification", "south-congress", "soco"]
+title: 'The South Congress Condopocalypse'
+date: '2025-12-29'
+series: 'condos-of-shame'
+tags: ['development', 'gentrification', 'south-congress', 'soco']
 excerpt: "South Congress used to be weird. Now it's weird that anyone can still afford to be there."
-heroImage: "/img/og/south-congress-condopocalypse.png"
-ogImage: "/img/og/south-congress-condopocalypse.png"
-readingTime: "5 min read"
+heroImage: '/img/og/south-congress-condopocalypse.png'
+ogImage: '/img/og/south-congress-condopocalypse.png'
+readingTime: '5 min read'
 shareLine: "SoCo didn't sell out. It got outbid, outbuilt, and out-branded until selling out was the only option left."
 ---
 
-There's a condo going up between a vintage clothing store and a boot shop on South Congress, and if that sentence doesn't tell you everything you need to know about Austin in 2025, you haven't been paying attention. Or you moved here after 2019, in which case — welcome, the breakfast tacos used to be [three dollars](/posts/breakfast-tacos-three-dollars), the music was free, and SoCo was a street, not a brand.
+There's a condo going up between a vintage clothing store and a boot shop on South Congress, and if that sentence doesn't tell you everything you need to know about Austin in 2026, you haven't been paying attention. Or you moved here after 2019, in which case — welcome, the breakfast tacos used to be [three dollars](/posts/breakfast-tacos-three-dollars), the music was free, and SoCo was a street, not a brand.
 
 South Congress Avenue was, for a specific and beautiful window of time, the physical manifestation of "Keep Austin Weird." Not the bumper sticker — the actual ethos. It was junk shops and taco trailers and a guy selling handmade jewelry out of a converted Airstream and nobody asking what your "monthly parking situation" was. You went to SoCo to wander. You went because the whole point was that there was no point.
 

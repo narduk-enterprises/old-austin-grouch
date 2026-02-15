@@ -1,6 +1,6 @@
 ---
 title: "A Eulogy for the $3 Breakfast Taco"
-date: "2024-03-12"
+date: "2025-05-01"
 series: "things-that-used-to-cost-three-dollars"
 tags: ["prices", "nostalgia", "breakfast-tacos", "food", "gentrification"]
 excerpt: "Austin's signature food used to be cheap fuel, not a lifestyle brand."

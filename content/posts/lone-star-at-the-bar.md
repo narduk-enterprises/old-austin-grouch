@@ -1,6 +1,6 @@
 ---
 title: "Lone Star at the Bar: A $3 Tall Boy Requiem"
-date: "2024-02-19"
+date: "2025-04-02"
 series: "things-that-used-to-cost-three-dollars"
 tags: ["prices", "nostalgia", "dive-bars", "beer", "nightlife"]
 excerpt: "The Lone Star tallboy was a civic institution. Now it's a 'retro selection' on a craft menu."

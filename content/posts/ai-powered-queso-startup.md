@@ -1,6 +1,6 @@
 ---
 title: "Tech Bro of the Week: The AI-Powered Queso Disruptor"
-date: "2025-02-18"
+date: "2026-01-12"
 series: "tech-bro-of-the-week"
 tags: ["tech", "satire", "queso", "ai", "startups"]
 excerpt: "His algorithm has tasted ten thousand quesos. It has learned nothing."
