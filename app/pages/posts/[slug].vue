@@ -29,16 +29,18 @@ usePageSeo({
 
 // BlogPosting JSON-LD
 useSchemaOrg([
-  defineBlogPosting({
+  {
+    '@type': 'BlogPosting',
     headline: post.value.title,
     description: post.value.excerpt,
     datePublished: post.value.date,
     image: post.value.heroImage || '/img/og-default.png',
     author: {
+      '@type': 'Person',
       name: 'The Old Austin Grouch',
       url: 'https://oldaustingrouch.com/about',
     },
-  }),
+  },
 ])
 
 // Get related posts from the same series

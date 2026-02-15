@@ -10,7 +10,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
-    "deploy": "nuxt build && node scripts/patch-cf-process-proxy.mjs && wrangler deploy",
+    "deploy": "nuxt build && node scripts/patch-cf-process-proxy.mjs && wrangler deploy && node scripts/seed-d1.mjs",
     "lint": "eslint app/ server/ --no-error-on-unmatched-pattern",
     "postbuild": "node scripts/patch-cf-process-proxy.mjs"
   },
