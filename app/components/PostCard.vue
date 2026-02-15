@@ -7,6 +7,7 @@ const props = defineProps<{
   date: string
   series: string
   path: string
+  heroImage?: string
   readingTime?: string
   tags?: string[]
 }>()
@@ -20,7 +21,14 @@ const formattedDate = computed(() => {
 
 <template>
   <NuxtLink :to="path" class="block group">
-    <UCard variant="outline" class="h-full transition-all duration-200 group-hover:shadow-md group-hover:border-amber-300 dark:group-hover:border-amber-700">
+    <UCard variant="outline" class="h-full transition-all duration-200 group-hover:shadow-md group-hover:border-amber-300 dark:group-hover:border-amber-700 overflow-hidden">
+      <img
+        v-if="heroImage"
+        :src="heroImage"
+        :alt="title"
+        class="w-full aspect-[1200/630] object-cover -mx-6 -mt-6 mb-4 max-w-[calc(100%+3rem)]"
+        loading="lazy"
+      >
       <div class="flex flex-col gap-3">
         <!-- Series badge + date -->
         <div class="flex items-center justify-between gap-2 flex-wrap">

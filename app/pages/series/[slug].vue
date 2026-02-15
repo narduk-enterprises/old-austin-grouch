@@ -55,6 +55,7 @@ const { data: posts } = await useAsyncData(`series-${slug}`, () =>
         :series="post.series"
         :path="post.path"
         :reading-time="post.readingTime"
+        :hero-image="post.heroImage"
         :tags="post.tags"
       />
     </div>

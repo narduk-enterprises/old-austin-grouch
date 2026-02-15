@@ -59,6 +59,16 @@ const filteredRelated = computed(() =>
 
 <template>
   <article v-if="post" class="max-w-3xl mx-auto">
+    <!-- Hero image -->
+    <div v-if="post.heroImage" class="mb-8 -mx-4 sm:mx-0">
+      <img
+        :src="post.heroImage"
+        :alt="post.title"
+        class="w-full aspect-[1200/630] object-cover rounded-none sm:rounded-xl shadow-lg"
+        loading="eager"
+      >
+    </div>
+
     <!-- Post header -->
     <header class="mb-8">
       <div class="flex items-center gap-3 mb-4 flex-wrap">
@@ -133,6 +143,7 @@ const filteredRelated = computed(() =>
             :series="related.series"
             :path="related.path"
             :reading-time="related.readingTime"
+            :hero-image="related.heroImage"
           />
         </div>
       </div>

@@ -16,6 +16,7 @@ const mobileMenuOpen = ref(false)
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center gap-2 group">
+          <img src="/img/logo.png" alt="Old Austin Grouch" class="w-9 h-9 rounded-full" />
           <span class="text-xl sm:text-2xl font-display font-bold text-amber-900 dark:text-amber-400 group-hover:text-amber-700 dark:group-hover:text-amber-300 transition-colors">
             Old Austin Grouch
           </span>

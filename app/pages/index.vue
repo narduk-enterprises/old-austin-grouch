@@ -67,6 +67,7 @@ function getPostCount(slug: string): number {
           :series="post.series"
           :path="post.path"
           :reading-time="post.readingTime"
+          :hero-image="post.heroImage"
           :tags="post.tags"
           class="animate-card-enter"
           :style="{ animationDelay: `${i * 100}ms` }"

@@ -134,6 +134,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/img/logo.png' },
+        { rel: 'apple-touch-icon', href: '/img/logo.png' },
       ],
     },
     pageTransition: { name: 'page', mode: 'out-in' },
