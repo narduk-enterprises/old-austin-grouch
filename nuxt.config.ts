@@ -57,13 +57,13 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteUrl: process.env.SITE_URL || 'https://oldaustingrouch.com',
+      siteUrl: process.env.SITE_URL || 'https://grouch.austin-texas.net',
       siteName: 'Old Austin Grouch',
     },
   },
 
   site: {
-    url: 'https://oldaustingrouch.com',
+    url: 'https://grouch.austin-texas.net',
     name: 'Old Austin Grouch',
   },
 
@@ -85,7 +85,7 @@ export default defineNuxtConfig({
     identity: {
       type: 'Organization',
       name: 'Old Austin Grouch',
-      url: 'https://oldaustingrouch.com',
+      url: 'https://grouch.austin-texas.net',
       logo: '/img/logo.png',
       description:
         'Comedic Austin nostalgia satire. Dry, sharp, hyper-specific cultural commentary from someone who remembers when this town was weird for free.',

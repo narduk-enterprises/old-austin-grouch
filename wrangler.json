@@ -9,6 +9,12 @@
   "compatibility_flags": [
     "nodejs_compat_v2"
   ],
+  "routes": [
+    {
+      "pattern": "grouch.austin-texas.net",
+      "custom_domain": true
+    }
+  ],
   "d1_databases": [
     {
       "binding": "DB",
