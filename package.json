@@ -11,7 +11,9 @@
     "postinstall": "nuxt prepare",
     "typecheck": "npx nuxt typecheck",
     "deploy": "nuxt build && wrangler deploy",
-    "generate:favicons": "node scripts/generate-favicons.mjs"
+    "generate:favicons": "node scripts/generate-favicons.mjs",
+    "test:unit": "vitest",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@nuxt/content": "^3.11.2",
@@ -30,7 +32,13 @@
     "@cloudflare/workers-types": "^4.20250620.0",
     "@iconify-json/lucide": "^1.2.94",
     "@nuxt/fonts": "^0.11.4",
+    "@nuxt/test-utils": "^4.0.0",
+    "@playwright/test": "^1.58.2",
     "@types/node": "^22.15.0",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^20.7.0",
+    "playwright": "^1.58.2",
+    "vitest": "^4.0.18",
     "wrangler": "^4.20.0"
   },
   "overrides": {

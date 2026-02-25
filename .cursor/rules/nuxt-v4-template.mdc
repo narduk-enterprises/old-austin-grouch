@@ -12,4 +12,5 @@ alwaysApply: true
 - Data fetching: use `useAsyncData`/`useFetch`, never raw `$fetch` in `<script setup>`
 - SSR state: use `useState()` or Pinia, never bare `ref()` at module scope
 - Architecture: thin components, thick composables. No inline business logic in templates.
+- **CRITICAL**: If building a new app, change package.json `name` and remove `origin` remote. NEVER commit back to the template repo.
 - See `AGENTS.md` at project root for full details and audit workflows.

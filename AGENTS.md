@@ -64,9 +64,21 @@ Sitemap and robots.txt are automatic. OG image templates live in `app/components
 ## Starting a New Project from This Template
 
 1. Install dependencies
-2. Delete demo files: `app/pages/components.vue`, `app/pages/todos.vue`, `server/api/todos*`, `app/components/AuthDemo.vue`
-3. Keep: `app/app.vue`, `server/utils/auth.ts`, `server/api/auth/*`, `server/database/schema.ts`
-4. Update `nuxt.config.ts` `site` block with your domain and site name
+2. **Critial First Step**: Change the `name` field in `package.json` away from `"nuxt-v4-template"`. Remove the git origin (`git remote remove origin`) so you don't accidentally push commits to the template repository.
+3. Delete demo files: `app/pages/components.vue`, `app/pages/todos.vue`, `server/api/todos*`, `app/components/AuthDemo.vue`
+4. Keep: `app/app.vue`, `server/utils/auth.ts`, `server/api/auth/*`, `server/database/schema.ts`
+5. Update `nuxt.config.ts` `site` block with your domain and site name
+
+## 🚨 CRITICAL RULE: NEVER COMMIT TO THIS REPOSITORY 🚨
+
+If you are an agent building a new project inside a clone of this repository, **DO NOT COMMIT OR PUSH** directly back to `loganrenz/nuxt-v4-template`. You must ensure the user has set up a new remote origin first, or you are working in a detached environment. Accidental commits to the template repo will break it for everyone.
+
+## Testing Infrastructure
+
+This template includes a dual-layer testing strategy:
+
+- **Unit & Composables (Vitest)**: Run `npm run test:unit`. Uses `@nuxt/test-utils` for full Nuxt environment context.
+- **End-to-End (Playwright)**: Run `npm run test:e2e`. Playwright automatically spins up the Nuxt 4 dev server for isolated routing and UI checks.
 
 ## Quality Audit Workflows
 
