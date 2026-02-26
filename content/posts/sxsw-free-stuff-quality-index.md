@@ -3,7 +3,7 @@ title: 'The SXSW Free Stuff Quality Index: A Decline Measured in Koozies'
 date: '2025-11-17'
 series: 'sxsw-ruin-counter'
 tags: ['sxsw', 'festivals', 'swag', 'freebies', 'corporate']
-excerpt: "The free stuff used to be good. Then it was fine. Now it's a QR code printed on a napkin."
+summary: "The free stuff used to be good. Then it was fine. Now it's a QR code printed on a napkin."
 heroImage: '/img/og/sxsw-free-stuff-quality-index.png'
 ogImage: '/img/og/sxsw-free-stuff-quality-index.png'
 readingTime: '4 min read'

@@ -3,7 +3,7 @@ title: 'SXSW Badge Price Timeline: A Brief History of Financial Ruin'
 date: '2025-04-15'
 series: 'sxsw-ruin-counter'
 tags: ['sxsw', 'festivals', 'badges', 'pricing', 'gentrification']
-excerpt: 'From $50 wristbands to $1,900 platinum passes — a love story between Austin and your empty wallet.'
+summary: 'From $50 wristbands to $1,900 platinum passes — a love story between Austin and your empty wallet.'
 heroImage: '/img/og/sxsw-badge-price-timeline.png'
 ogImage: '/img/og/sxsw-badge-price-timeline.png'
 readingTime: '4 min read'

@@ -8,6 +8,7 @@ usePageSeo({
 
 const { data: allPosts } = await useAsyncData('all-posts', () =>
   queryCollection('posts')
+    .select('title', 'summary', 'date', 'series', 'path', 'readingTime', 'heroImage', 'tags')
     .order('date', 'DESC')
     .all(),
 )
@@ -101,7 +102,7 @@ function clearFilters() {
         v-for="post in filteredPosts"
         :key="post.path"
         :title="post.title"
-        :excerpt="post.excerpt"
+        :summary="post.summary"
         :date="post.date"
         :series="post.series"
         :path="post.path"

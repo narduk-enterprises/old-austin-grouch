@@ -22,7 +22,7 @@ const formattedDate = computed(() => {
 
 usePageSeo({
   title: `${post.value.title} — Old Austin Grouch`,
-  description: post.value.excerpt,
+  description: post.value.summary,
   image: post.value.ogImage || post.value.heroImage,
   type: 'article',
 })
@@ -32,7 +32,7 @@ useSchemaOrg([
   {
     '@type': 'BlogPosting',
     headline: post.value.title,
-    description: post.value.excerpt,
+    description: post.value.summary,
     datePublished: post.value.date,
     image: post.value.heroImage || '/img/og-default.png',
     author: {
@@ -92,7 +92,7 @@ const filteredRelated = computed(() =>
       </h1>
 
       <p class="text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-        {{ post.excerpt }}
+        {{ post.summary }}
       </p>
 
       <!-- Share line callout -->
@@ -138,7 +138,7 @@ const filteredRelated = computed(() =>
             v-for="related in filteredRelated"
             :key="related.path"
             :title="related.title"
-            :excerpt="related.excerpt"
+            :summary="related.summary"
             :date="related.date"
             :series="related.series"
             :path="related.path"

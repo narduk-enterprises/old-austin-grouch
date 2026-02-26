@@ -3,7 +3,7 @@ title: 'The South Congress Condopocalypse'
 date: '2025-12-29'
 series: 'condos-of-shame'
 tags: ['development', 'gentrification', 'south-congress', 'soco']
-excerpt: "South Congress used to be weird. Now it's weird that anyone can still afford to be there."
+summary: "South Congress used to be weird. Now it's weird that anyone can still afford to be there."
 heroImage: '/img/og/south-congress-condopocalypse.png'
 ogImage: '/img/og/south-congress-condopocalypse.png'
 readingTime: '5 min read'

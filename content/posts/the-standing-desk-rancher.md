@@ -3,7 +3,7 @@ title: "Tech Bro of the Week: The Standing Desk Rancher"
 date: "2026-02-10"
 series: "tech-bro-of-the-week"
 tags: ["tech", "satire", "ranch-life", "remote-work", "hill-country"]
-excerpt: "He bought 40 acres in Dripping Springs and now has opinions about cedar."
+summary: "He bought 40 acres in Dripping Springs and now has opinions about cedar."
 heroImage: "/img/og/the-standing-desk-rancher.png"
 ogImage: "/img/og/the-standing-desk-rancher.png"
 readingTime: "4 min read"

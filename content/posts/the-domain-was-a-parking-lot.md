@@ -3,7 +3,7 @@ title: "The Domain Was a Parking Lot"
 date: "2025-08-12"
 series: "condos-of-shame"
 tags: ["development", "gentrification", "the-domain", "north-austin"]
-excerpt: "Before it was Austin's shiniest open-air mall-suburb, The Domain was just a bunch of nothing next to an IBM campus nobody talked about."
+summary: "Before it was Austin's shiniest open-air mall-suburb, The Domain was just a bunch of nothing next to an IBM campus nobody talked about."
 heroImage: "/img/og/the-domain-was-a-parking-lot.png"
 ogImage: "/img/og/the-domain-was-a-parking-lot.png"
 readingTime: "4 min read"

@@ -27,10 +27,10 @@ Focus on topics like: gentrification, traffic, the tech bro invasion, expensive 
 
 Requirements:
 1. The output MUST be in Markdown format.
-2. It MUST start with a YAML frontmatter block containing 'title', 'date', 'series', 'tags', 'excerpt', and 'readingTime'.
+2. It MUST start with a YAML frontmatter block containing 'title', 'date', 'series', 'tags', 'summary', and 'readingTime'.
 3. The 'author' is always "The Grouch".
 4. The 'series' should be something like "things-we-lost", "california-invasion", or "prices-are-too-damn-high".
-5. The 'excerpt' MUST be a non-empty, witty 1-2 sentence summary of the article in the same sarcastic tone. This is critical — never leave it blank or set it to null.
+5. The 'summary' MUST be a non-empty, witty 1-2 sentence summary of the article in the same sarcastic tone. This is critical — never leave it blank or set it to null.
 6. Use a very dry, sarcastic, hyper-specific tone.
 7. The length MUST be at least 600 words long. Do not write a short summary. Write a full, detailed, multi-paragraph rant.
 
@@ -40,7 +40,7 @@ title: "The $14 Breakfast Taco is an Affront to God"
 date: "YYYY-MM-DD"
 series: "prices-are-too-damn-high"
 tags: ["breakfast-tacos", "california", "pricing"]
-excerpt: "Austin's signature food used to be cheap fuel, not a lifestyle brand. The $14 taco is here and it has truffle oil."
+summary: "Austin's signature food used to be cheap fuel, not a lifestyle brand. The $14 taco is here and it has truffle oil."
 readingTime: "3 min read"
 ---
 `

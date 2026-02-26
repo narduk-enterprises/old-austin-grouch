@@ -3,7 +3,7 @@ title: "Thrift Store T-Shirts: From $3 Bin to $45 'Curated Vintage'"
 date: "2025-07-14"
 series: "things-that-used-to-cost-three-dollars"
 tags: ["prices", "nostalgia", "thrift-stores", "fashion", "vintage"]
-excerpt: "You used to dig through a bin for a $3 tee. Now someone digs through the bin for you and charges $45."
+summary: "You used to dig through a bin for a $3 tee. Now someone digs through the bin for you and charges $45."
 heroImage: "/img/og/thrift-store-t-shirts.png"
 ogImage: "/img/og/thrift-store-t-shirts.png"
 readingTime: "4 min read"

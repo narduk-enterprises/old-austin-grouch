@@ -3,7 +3,7 @@ title: "Emo's on Sixth: Before the Move, Before the Mourn"
 date: "2025-07-28"
 series: "lost-venues-and-dive-bars"
 tags: ["music", "venues", "emos", "sixth-street", "punk"]
-excerpt: "The original Emo's wasn't a venue. It was a bruise you were proud of."
+summary: "The original Emo's wasn't a venue. It was a bruise you were proud of."
 heroImage: "/img/og/emos-original-location.png"
 ogImage: "/img/og/emos-original-location.png"
 readingTime: "4 min read"

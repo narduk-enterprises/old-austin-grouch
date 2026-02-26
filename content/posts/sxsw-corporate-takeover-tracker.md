@@ -3,7 +3,7 @@ title: 'The SXSW Corporate Takeover Tracker: Block by Block, Brand by Brand'
 date: '2025-12-15'
 series: 'sxsw-ruin-counter'
 tags: ['sxsw', 'festivals', 'corporate', 'sponsorship', 'downtown']
-excerpt: 'We mapped every corporate activation zone in downtown Austin during SXSW. It took three days and most of our will to live.'
+summary: 'We mapped every corporate activation zone in downtown Austin during SXSW. It took three days and most of our will to live.'
 heroImage: '/img/og/sxsw-corporate-takeover-tracker.png'
 ogImage: '/img/og/sxsw-corporate-takeover-tracker.png'
 readingTime: '5 min read'

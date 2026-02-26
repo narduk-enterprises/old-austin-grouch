@@ -3,7 +3,7 @@ title: 'Hole in the Wall: Still Here, Still Holy'
 date: '2025-06-18'
 series: 'lost-venues-and-dive-bars'
 tags: ['music', 'venues', 'hole-in-the-wall', 'the-drag', 'ut']
-excerpt: "It's survived everything Austin has thrown at it, which at this point is basically a siege."
+summary: "It's survived everything Austin has thrown at it, which at this point is basically a siege."
 heroImage: '/img/og/the-hole-in-the-wall-legacy.png'
 ogImage: '/img/og/the-hole-in-the-wall-legacy.png'
 readingTime: '4 min read'

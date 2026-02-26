@@ -3,7 +3,7 @@ title: "Parking Downtown: A $3 Meter, a $30 Garage, and the Death of Spontaneity
 date: "2025-05-22"
 series: "things-that-used-to-cost-three-dollars"
 tags: ["prices", "nostalgia", "downtown", "parking", "infrastructure"]
-excerpt: "Parking used to be an afterthought. Now it's a second mortgage."
+summary: "Parking used to be an afterthought. Now it's a second mortgage."
 heroImage: "/img/og/parking-downtown.png"
 ogImage: "/img/og/parking-downtown.png"
 readingTime: "4 min read"

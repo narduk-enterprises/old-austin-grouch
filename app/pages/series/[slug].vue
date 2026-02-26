@@ -18,6 +18,7 @@ usePageSeo({
 const { data: posts } = await useAsyncData(`series-${slug}`, () =>
   queryCollection('posts')
     .where('series', '=', slug)
+    .select('title', 'summary', 'date', 'series', 'path', 'readingTime', 'heroImage', 'tags')
     .order('date', 'DESC')
     .all(),
 )
@@ -50,7 +51,7 @@ const { data: posts } = await useAsyncData(`series-${slug}`, () =>
         v-for="post in posts"
         :key="post.path"
         :title="post.title"
-        :excerpt="post.excerpt"
+        :summary="post.summary"
         :date="post.date"
         :series="post.series"
         :path="post.path"

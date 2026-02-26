@@ -3,7 +3,7 @@ title: 'Liberty Lunch: A Ghost Story in Three Chords'
 date: '2025-05-10'
 series: 'lost-venues-and-dive-bars'
 tags: ['music', 'venues', 'liberty-lunch', 'downtown', '90s']
-excerpt: 'They tore it down in 1999 and put up an office building. The bass notes are still in the soil.'
+summary: 'They tore it down in 1999 and put up an office building. The bass notes are still in the soil.'
 heroImage: '/img/og/liberty-lunch-ghost-story.png'
 ogImage: '/img/og/liberty-lunch-ghost-story.png'
 readingTime: '5 min read'

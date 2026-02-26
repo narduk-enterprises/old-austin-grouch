@@ -3,7 +3,7 @@ title: "Riverside 'Luxury' Lofts"
 date: '2025-10-20'
 series: 'condos-of-shame'
 tags: ['development', 'gentrification', 'riverside', 'east-austin']
-excerpt: "Riverside Drive used to be where you lived when you couldn't afford anywhere else. Now you can't afford Riverside Drive either."
+summary: "Riverside Drive used to be where you lived when you couldn't afford anywhere else. Now you can't afford Riverside Drive either."
 heroImage: '/img/og/riverside-luxury-lofts.png'
 ogImage: '/img/og/riverside-luxury-lofts.png'
 readingTime: '5 min read'

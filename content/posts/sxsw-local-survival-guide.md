@@ -3,7 +3,7 @@ title: "The SXSW Local Survival Guide: Or, How to Live in Your Own City for Two 
 date: "2025-07-01"
 series: "sxsw-ruin-counter"
 tags: ["sxsw", "festivals", "locals", "survival", "austin-life"]
-excerpt: "A tactical guide for Austinites who want to survive SXSW by doing the only sane thing: avoiding it completely."
+summary: "A tactical guide for Austinites who want to survive SXSW by doing the only sane thing: avoiding it completely."
 heroImage: "/img/og/sxsw-local-survival-guide.png"
 ogImage: "/img/og/sxsw-local-survival-guide.png"
 readingTime: "5 min read"

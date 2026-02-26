@@ -3,7 +3,7 @@ title: "The SXSW Porta-Potty Census: What 1,200 Plastic Toilets Say About Late C
 date: "2025-09-08"
 series: "sxsw-ruin-counter"
 tags: ["sxsw", "festivals", "infrastructure", "sanitation", "priorities"]
-excerpt: "We counted the porta-potties so you don't have to. The findings are damning and poorly ventilated."
+summary: "We counted the porta-potties so you don't have to. The findings are damning and poorly ventilated."
 heroImage: "/img/og/sxsw-porta-potty-census.png"
 ogImage: "/img/og/sxsw-porta-potty-census.png"
 readingTime: "5 min read"

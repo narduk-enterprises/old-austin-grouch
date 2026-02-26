@@ -3,7 +3,7 @@ title: "Tech Bro of the Week: The VC-Funded 'Co-Living Experience' That Used to 
 date: "2026-02-01"
 series: "tech-bro-of-the-week"
 tags: ["tech", "satire", "housing", "gentrification", "co-living"]
-excerpt: "They removed 34 affordable housing units and replaced them with 34 luxury tiny homes with a communal kombucha tap."
+summary: "They removed 34 affordable housing units and replaced them with 34 luxury tiny homes with a communal kombucha tap."
 heroImage: "/img/og/vc-funded-trailer-park.png"
 ogImage: "/img/og/vc-funded-trailer-park.png"
 readingTime: "5 min read"

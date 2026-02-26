@@ -10,6 +10,7 @@ usePageSeo({
 
 const { data: latestPosts } = await useAsyncData('latest-posts', () =>
   queryCollection('posts')
+    .select('title', 'summary', 'date', 'series', 'path', 'readingTime', 'heroImage', 'tags')
     .order('date', 'DESC')
     .limit(6)
     .all(),
@@ -65,7 +66,7 @@ function getPostCount(slug: string): number {
           v-for="(post, i) in latestPosts"
           :key="post.path"
           :title="post.title"
-          :excerpt="post.excerpt"
+          :summary="post.summary"
           :date="post.date"
           :series="post.series"
           :path="post.path"

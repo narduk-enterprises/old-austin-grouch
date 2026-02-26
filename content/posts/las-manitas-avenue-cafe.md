@@ -3,7 +3,7 @@ title: "Las Manitas Avenue Cafe: The Counter Where Austin Used to Sit"
 date: "2025-08-25"
 series: "lost-venues-and-dive-bars"
 tags: ["music", "venues", "tex-mex", "congress-avenue", "restaurants"]
-excerpt: "They closed in 2008. Congress Avenue has never fully recovered. Neither have we."
+summary: "They closed in 2008. Congress Avenue has never fully recovered. Neither have we."
 heroImage: "/img/og/las-manitas-avenue-cafe.png"
 ogImage: "/img/og/las-manitas-avenue-cafe.png"
 readingTime: "5 min read"

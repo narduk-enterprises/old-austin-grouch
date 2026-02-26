@@ -3,7 +3,7 @@ import { getSeriesBySlug } from '~/utils/series'
 
 const props = defineProps<{
   title: string
-  excerpt?: string
+  summary?: string
   date: string
   series: string
   path: string
@@ -49,7 +49,7 @@ const formattedDate = computed(() => {
 
         <!-- Excerpt -->
         <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed line-clamp-3">
-          {{ excerpt }}
+          {{ summary }}
         </p>
 
         <!-- Meta -->

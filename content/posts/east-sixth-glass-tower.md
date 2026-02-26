@@ -3,7 +3,7 @@ title: "The East Sixth Glass Tower Invasion"
 date: "2025-12-01"
 series: "condos-of-shame"
 tags: ["development", "gentrification", "east-austin", "i-35"]
-excerpt: "The glass towers crossed I-35 and nobody even pretended to be surprised."
+summary: "The glass towers crossed I-35 and nobody even pretended to be surprised."
 heroImage: "/img/og/east-sixth-glass-tower.png"
 ogImage: "/img/og/east-sixth-glass-tower.png"
 readingTime: "4 min read"
