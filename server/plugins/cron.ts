@@ -31,7 +31,7 @@ Requirements:
 3. The 'author' is always "The Grouch".
 4. The 'series' should be something like "things-we-lost", "california-invasion", or "prices-are-too-damn-high".
 5. Use a very dry, sarcastic, hyper-specific tone.
-6. The length should be around 400-600 words.
+6. The length MUST be at least 600 words long. Do not write a short summary. Write a full, detailed, multi-paragraph rant.
 
 Example Frontmatter:
 ---
@@ -46,7 +46,8 @@ readingTime: "3 min read"
 
       console.log('Sending prompt to Cloudflare Workers AI (llama-3.1-8b-instruct)...')
       const response = await ai.run('@cf/meta/llama-3.1-8b-instruct', {
-        messages: [{ role: 'user', content: prompt }]
+        messages: [{ role: 'user', content: prompt }],
+        max_tokens: 1500
       })
 
       const markdownContent = response.response
