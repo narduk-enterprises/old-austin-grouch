@@ -17,7 +17,13 @@
     "quality": "pnpm run lint && pnpm run typecheck",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "wrangler d1 execute nuxt-v4-template-db --local --file=drizzle/0000_initial_schema.sql",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "setup": "npx jiti tools/setup-analytics.ts status",
+    "setup:all": "npx jiti tools/setup-analytics.ts all",
+    "setup:posthog": "npx jiti tools/setup-analytics.ts posthog",
+    "setup:ga": "npx jiti tools/setup-analytics.ts ga",
+    "setup:gsc": "npx jiti tools/setup-analytics.ts gsc",
+    "setup:gsc:verify": "npx jiti tools/setup-analytics.ts gsc:verify"
   },
   "dependencies": {
     "@nuxt/content": "^3.11.2",
@@ -43,18 +49,12 @@
     "drizzle-kit": "^0.31.9",
     "eslint": "^9.39.3",
     "eslint-config-prettier": "^10.1.8",
+    "googleapis": "^171.4.0",
     "prettier": "^3.8.1",
     "typescript-eslint": "^8.56.1",
     "vue-eslint-parser": "^10.4.0",
     "wrangler": "^4.20.0"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "better-sqlite3",
-      "esbuild"
-    ]
-  },
-
   "pnpm": {
     "onlyBuiltDependencies": [
       "better-sqlite3",

@@ -45,12 +45,18 @@ jobs:
             nuxt-build-${{ hashFiles('pnpm-lock.yaml') }}-
             nuxt-build-
 
+      - name: Fetch Doppler Secrets
+        uses: dopplerhq/secrets-fetch-action@v1.2.0
+        with:
+          doppler-token: ${{ secrets.DOPPLER_TOKEN }}
+          inject-env-vars: true
+
       - name: Build
         run: pnpm build
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy
