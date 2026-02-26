@@ -15,7 +15,7 @@ const props = defineProps<{
 const seriesInfo = computed(() => getSeriesBySlug(props.series))
 const formattedDate = computed(() => {
   const d = new Date(props.date)
-  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+  return d.toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' })
 })
 </script>
 

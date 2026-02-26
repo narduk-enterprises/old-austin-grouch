@@ -17,7 +17,7 @@ const seriesInfo = computed(() => post.value ? getSeriesBySlug(post.value.series
 const formattedDate = computed(() => {
   if (!post.value) return ''
   const d = new Date(post.value.date)
-  return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
+  return d.toLocaleDateString('en-US', { timeZone: 'UTC', weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
 })
 
 usePageSeo({
