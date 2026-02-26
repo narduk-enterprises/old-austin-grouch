@@ -94,7 +94,7 @@ export default defineNuxtConfig({
   image: {
     provider: 'cloudflare',
     cloudflare: {
-      baseURL: process.env.SITE_URL || 'https://grouch.austin-texas.net',
+      baseURL: process.env.SITE_URL
     },
   },
 
