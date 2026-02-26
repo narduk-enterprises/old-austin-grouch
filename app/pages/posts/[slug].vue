@@ -103,14 +103,14 @@ const filteredRelated = computed(() =>
       </div>
     </header>
 
-    <UDivider class="my-6" />
+    <USeparator class="my-6" />
 
     <!-- Post content -->
     <div class="prose dark:prose-invert prose-stone prose-headings:font-display prose-a:text-amber-700 dark:prose-a:text-amber-400">
       <ContentRenderer :value="post" />
     </div>
 
-    <UDivider class="my-8" />
+    <USeparator class="my-8" />
 
     <!-- Share + tags -->
     <footer class="space-y-6">

@@ -125,7 +125,9 @@ export default defineNuxtConfig({
 
 
   nitro: {
-    preset: 'cloudflare-module',
+    // Only use cloudflare-module preset in production builds.
+    // In dev, use the default Node preset so @nuxt/content uses local SQLite.
+    preset: process.env.NODE_ENV === 'production' ? 'cloudflare-module' : undefined,
     esbuild: {
       options: {
         target: 'esnext'

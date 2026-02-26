@@ -87,7 +87,7 @@ const mobileMenuOpen = ref(false)
               class="justify-start"
               @click="mobileMenuOpen = false"
             />
-            <UDivider class="my-2" />
+            <USeparator class="my-2" />
             <p class="px-3 text-xs font-semibold text-stone-500 uppercase tracking-wider mb-1">Series</p>
             <UButton
               v-for="s in seriesList"
@@ -102,7 +102,7 @@ const mobileMenuOpen = ref(false)
               class="justify-start"
               @click="mobileMenuOpen = false"
             />
-            <UDivider class="my-2" />
+            <USeparator class="my-2" />
             <RandomGrouchButton block @click="mobileMenuOpen = false" />
           </div>
         </div>

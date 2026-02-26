@@ -49,7 +49,7 @@ const year = new Date().getFullYear()
         </div>
       </div>
 
-      <UDivider class="my-8" />
+      <USeparator class="my-8" />
 
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-xs text-stone-500">

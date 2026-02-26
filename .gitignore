@@ -26,4 +26,4 @@ logs
 .wrangler/
 
 # Build artifacts
-*.bak
+*.bak.dev.vars

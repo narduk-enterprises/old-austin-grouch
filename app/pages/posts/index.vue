@@ -8,7 +8,6 @@ usePageSeo({
 
 const { data: allPosts } = await useAsyncData('all-posts', () =>
   queryCollection('posts')
-    .select('title', 'excerpt', 'date', 'series', 'path', 'readingTime', 'heroImage', 'tags')
     .order('date', 'DESC')
     .all(),
 )

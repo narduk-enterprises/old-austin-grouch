@@ -26,7 +26,7 @@ usePageSeo({
       <SubscribeForm />
     </div>
 
-    <UDivider class="my-10" />
+    <USeparator class="my-10" />
 
     <h2 class="font-display text-xl font-bold text-stone-900 dark:text-stone-100 mb-4">
       What You'll Get

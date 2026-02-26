@@ -75,7 +75,7 @@ usePageSeo({
       </p>
     </div>
 
-    <UDivider class="my-10" />
+    <USeparator class="my-10" />
 
     <div class="text-center">
       <p class="text-sm text-stone-500 mb-4">Got a gripe? Got a memory? Got a correction?</p>

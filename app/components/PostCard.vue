@@ -3,7 +3,7 @@ import { getSeriesBySlug } from '~/utils/series'
 
 const props = defineProps<{
   title: string
-  excerpt: string
+  excerpt?: string
   date: string
   series: string
   path: string

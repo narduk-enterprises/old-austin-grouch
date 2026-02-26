@@ -15,6 +15,10 @@ export default defineEventHandler((event) => {
   // Only protect state-changing methods
   if (['GET', 'HEAD', 'OPTIONS'].includes(method)) return
 
+  // Allow Nuxt Content internal queries (SSR queries its own API via POST)
+  const path = getRequestURL(event).pathname
+  if (path.startsWith('/__nuxt_content/')) return
+
   const xRequestedWith = getHeader(event, 'x-requested-with')
 
   if (!xRequestedWith) {
