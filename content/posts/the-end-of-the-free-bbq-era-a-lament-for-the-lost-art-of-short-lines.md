@@ -1,10 +1,10 @@
 ---
-title: "The End of the Free BBQ Era: A Lament for the Lost Art of Short Lines"
-date: "2024-02-26"
-series: "things-we-lost"
-tags: ["bbq", "gentrification", "austin"]
-excerpt: "A nostalgic rant about the good old days of free BBQ and short lines."
-readingTime: "4 min read"
+title: 'The End of the Free BBQ Era: A Lament for the Lost Art of Short Lines'
+date: '2026-02-26'
+series: 'things-we-lost'
+tags: ['bbq', 'gentrification', 'austin']
+excerpt: 'A nostalgic rant about the good old days of free BBQ and short lines.'
+readingTime: '4 min read'
 ---
 
 The Grouch

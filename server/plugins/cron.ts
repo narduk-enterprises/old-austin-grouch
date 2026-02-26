@@ -2,7 +2,7 @@ import { defineNitroPlugin } from 'nitropack/runtime'
 
 export default defineNitroPlugin((nitroApp) => {
   // @ts-ignore
-  nitroApp.hooks.hook('cloudflare:scheduled', async ({ event, env }) => {
+  nitroApp.hooks.hook('cloudflare:scheduled', async ({ env }: { event: any, env: any }) => {
     try {
       console.log('Cron triggered. Starting weekly AI blog post generation...')
       
@@ -30,8 +30,9 @@ Requirements:
 2. It MUST start with a YAML frontmatter block containing 'title', 'date', 'series', 'tags', 'excerpt', and 'readingTime'.
 3. The 'author' is always "The Grouch".
 4. The 'series' should be something like "things-we-lost", "california-invasion", or "prices-are-too-damn-high".
-5. Use a very dry, sarcastic, hyper-specific tone.
-6. The length MUST be at least 600 words long. Do not write a short summary. Write a full, detailed, multi-paragraph rant.
+5. The 'excerpt' MUST be a non-empty, witty 1-2 sentence summary of the article in the same sarcastic tone. This is critical — never leave it blank or set it to null.
+6. Use a very dry, sarcastic, hyper-specific tone.
+7. The length MUST be at least 600 words long. Do not write a short summary. Write a full, detailed, multi-paragraph rant.
 
 Example Frontmatter:
 ---
@@ -39,7 +40,7 @@ title: "The $14 Breakfast Taco is an Affront to God"
 date: "YYYY-MM-DD"
 series: "prices-are-too-damn-high"
 tags: ["breakfast-tacos", "california", "pricing"]
-excerpt: "A short sarcastic summary here."
+excerpt: "Austin's signature food used to be cheap fuel, not a lifestyle brand. The $14 taco is here and it has truffle oil."
 readingTime: "3 min read"
 ---
 `
@@ -47,7 +48,7 @@ readingTime: "3 min read"
       console.log('Sending prompt to Cloudflare Workers AI (llama-3.1-8b-instruct)...')
       const response = await ai.run('@cf/meta/llama-3.1-8b-instruct', {
         messages: [{ role: 'user', content: prompt }],
-        max_tokens: 1500
+        max_tokens: 2500
       })
 
       const markdownContent = response.response
@@ -72,9 +73,9 @@ readingTime: "3 min read"
       const path = `content/posts/${filename}`
       const url = `https://api.github.com/repos/${repo}/contents/${path}`
 
-      // Update date in frontmatter to today
+      // Replace whatever date the AI generated with today's actual date
       const today = new Date().toISOString().split('T')[0]
-      const finalContent = markdownContent.replace(/date:\s*["']?YYYY-MM-DD["']?/i, `date: "${today}"`)
+      const finalContent = markdownContent.replace(/date:\s*["']?[^\n"']*["']?/i, `date: "${today}"`)
 
       // Base64 encode the content correctly for unicode (btoa doesn't handle utf8)
       // Since this runs in Cloudflare Workers, we use built-in btoa but encodeURIComponent trick
