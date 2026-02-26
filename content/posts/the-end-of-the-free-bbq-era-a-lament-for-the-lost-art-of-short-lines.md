@@ -4,6 +4,8 @@ date: '2026-02-26'
 series: 'things-we-lost'
 tags: ['bbq', 'gentrification', 'austin']
 summary: 'A nostalgic rant about the good old days of free BBQ and short lines.'
+heroImage: '/img/og/the-end-of-the-free-bbq-era-a-lament-for-the-lost-art-of-short-lines.png'
+ogImage: '/img/og/the-end-of-the-free-bbq-era-a-lament-for-the-lost-art-of-short-lines.png'
 readingTime: '4 min read'
 ---
 
