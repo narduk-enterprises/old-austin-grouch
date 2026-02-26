@@ -155,9 +155,9 @@ function checkStatus(): StatusResult {
     'Run: npm run setup:posthog (or set manually from Project Settings)'
   )
   check(
-    'POSTHOG_PERSONAL_API_KEY',
-    env('POSTHOG_PERSONAL_API_KEY'),
-    'For automation: PostHog → Settings → Personal API Keys → create key with project:write'
+    'POSTHOG_PUBLIC_KEY',
+    env('POSTHOG_PUBLIC_KEY'),
+    'Set from Hubble/Analytics central project'
   )
   check(
     'POSTHOG_HOST',
@@ -277,98 +277,19 @@ function getAppName(): string {
 // PostHog automation
 // ---------------------------------------------------------------------------
 
-async function runPosthogSetup() {
-  const personalKey = env('POSTHOG_PERSONAL_API_KEY')
-  const host = (env('POSTHOG_HOST') || 'https://us.posthog.com').replace(/\/$/, '')
-
-  if (!personalKey) {
-    console.error('❌  POSTHOG_PERSONAL_API_KEY is required.')
-    console.error('   Create a personal API key at https://app.posthog.com/settings/user-api-keys with project:write scope.')
-    process.exit(1)
-  }
-
-  console.log()
-  console.log('Step 1/3: Getting organization...')
-  const phHeaders = { Authorization: `Bearer ${personalKey}` }
-  let orgRes: { statusCode: number; data: any }
-  try {
-    orgRes = await httpsJson('GET', `${host}/api/organizations/@current`, { headers: phHeaders })
-  } catch (e: any) {
-    const cause = e?.message || String(e)
-    throw new Error(`PostHog API request failed: ${cause}. Check POSTHOG_HOST (${host}) and network.`)
-  }
-  if (orgRes.statusCode < 200 || orgRes.statusCode >= 300) {
-    throw new Error(`PostHog API: ${orgRes.statusCode} ${JSON.stringify(orgRes.data)}`)
-  }
-  const org = orgRes.data
-  const orgId = org?.id ?? org?.results?.[0]?.id
-  if (!orgId) {
-    throw new Error('Could not determine organization ID from PostHog response')
-  }
-  console.log(`  ✅  Organization: ${orgId}`)
-
-  const projectName = getAppName()
-  console.log()
-  console.log(`Step 2/3: Creating project "${projectName}"...`)
-  let createRes: { statusCode: number; data: any }
-  try {
-    createRes = await httpsJson('POST', `${host}/api/organizations/${orgId}/projects/`, {
-      headers: phHeaders,
-      body: { name: projectName }
-    })
-  } catch (e: any) {
-    throw new Error(`PostHog API create project failed: ${e?.message || e}`)
-  }
-  if (createRes.statusCode < 200 || createRes.statusCode >= 300) {
-    throw new Error(`PostHog API create project: ${createRes.statusCode} ${JSON.stringify(createRes.data)}`)
-  }
-  const project = createRes.data
-  const apiToken = project?.api_token
-  if (!apiToken) {
-    throw new Error('PostHog project created but no api_token in response')
-  }
-  console.log(`  ✅  Project created.`)
-
-  console.log()
-  console.log('Step 3/3: Writing POSTHOG_PUBLIC_KEY to Doppler...')
-  writeSetupSecret('POSTHOG_PUBLIC_KEY', apiToken)
-
-  console.log()
-  console.log('🎉  PostHog setup complete!')
-  console.log()
-}
-
 async function runPosthogSetupOrSkip(): Promise<boolean> {
   if (env('POSTHOG_PUBLIC_KEY')) {
     console.log()
     console.log('  ⏭  PostHog: POSTHOG_PUBLIC_KEY already set, skipping.')
     return true
   }
-  if (!env('POSTHOG_PERSONAL_API_KEY')) {
-    console.log()
-    console.log('  ⏭  PostHog: POSTHOG_PERSONAL_API_KEY not set, skipping.')
-    return false
-  }
-  try {
-    await runPosthogSetup()
-    return true
-  } catch (e: any) {
-    const msg = e?.message || String(e)
-    if (msg.includes('fetch failed') || msg.includes('EPROTO') || msg.includes('SSL ') || msg.includes('tlsv1')) {
-      console.log()
-      console.log('  ⚠️  PostHog API unreachable (TLS/network). Skip and add POSTHOG_PUBLIC_KEY manually:')
-      console.log('      https://app.posthog.com → Project Settings → Project API Key')
-      console.log()
-      return false
-    }
-    if (msg.includes('403') || msg.includes('permission_denied') || msg.includes('maximum limit')) {
-      console.log()
-      console.log('  ⚠️  PostHog: project limit or permission. Add POSTHOG_PUBLIC_KEY manually or upgrade plan.')
-      console.log()
-      return false
-    }
-    throw e
-  }
+  
+  console.log()
+  console.log('  ⚠️  PostHog: POSTHOG_PUBLIC_KEY not set.')
+  console.log('      To use the shared Narduk Analytics project, bind the key from the Hub:')
+  console.log('      doppler secrets set POSTHOG_PUBLIC_KEY="\\${doppler.project.narduk-analytics.config.prd.secret.POSTHOG_PROJECT_TOKEN}"')
+  console.log()
+  return false
 }
 
 // ---------------------------------------------------------------------------
@@ -741,7 +662,7 @@ async function main() {
         break
 
       case 'posthog':
-        await runPosthogSetup()
+        console.log('PostHog projects are shared globally now. Link POSTHOG_PUBLIC_KEY from narduk-analytics.')
         break
 
       case 'ga':

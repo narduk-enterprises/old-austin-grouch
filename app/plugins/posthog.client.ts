@@ -14,6 +14,9 @@ export default defineNuxtPlugin(() => {
     loaded: (ph) => {
       if (import.meta.dev) ph.debug()
 
+      // Differentiate this app in the shared Narduk Analytics workspace
+      ph.register({ app: runtimeConfig.public.appName })
+
       // Opt out on localhost
       if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
         ph.opt_out_capturing()
