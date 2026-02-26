@@ -7,7 +7,10 @@ usePageSeo({
 })
 
 const { data: allPosts } = await useAsyncData('all-posts', () =>
-  queryCollection('posts').order('date', 'DESC').all(),
+  queryCollection('posts')
+    .select('title', 'excerpt', 'date', 'series', 'path', 'readingTime', 'heroImage', 'tags')
+    .order('date', 'DESC')
+    .all(),
 )
 
 const selectedSeries = ref<string | null>(null)

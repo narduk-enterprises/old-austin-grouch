@@ -18,6 +18,7 @@ usePageSeo({
 const { data: posts } = await useAsyncData(`series-${slug}`, () =>
   queryCollection('posts')
     .where('series', '=', slug)
+    .select('title', 'excerpt', 'date', 'series', 'path', 'readingTime', 'heroImage', 'tags')
     .order('date', 'DESC')
     .all(),
 )

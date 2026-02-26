@@ -9,7 +9,11 @@ usePageSeo({
 })
 
 const { data: latestPosts } = await useAsyncData('latest-posts', () =>
-  queryCollection('posts').order('date', 'DESC').limit(6).all(),
+  queryCollection('posts')
+    .select('title', 'excerpt', 'date', 'series', 'path', 'readingTime', 'heroImage', 'tags')
+    .order('date', 'DESC')
+    .limit(6)
+    .all(),
 )
 
 const { data: allPosts } = await useAsyncData('all-posts-count', () =>
