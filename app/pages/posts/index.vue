@@ -54,7 +54,7 @@ function clearFilters() {
         <UButton
           label="All Series"
           :variant="selectedSeries === null ? 'solid' : 'outline'"
-          :color="selectedSeries === null ? 'amber' : 'neutral'"
+          :color="selectedSeries === null ? 'primary' : 'neutral'"
           size="xs"
           @click="selectedSeries = null"
         />
@@ -64,7 +64,7 @@ function clearFilters() {
           :label="s.title"
           :icon="s.icon"
           :variant="selectedSeries === s.slug ? 'solid' : 'outline'"
-          :color="selectedSeries === s.slug ? 'amber' : 'neutral'"
+          :color="selectedSeries === s.slug ? 'primary' : 'neutral'"
           size="xs"
           @click="selectedSeries = selectedSeries === s.slug ? null : s.slug"
         />
@@ -76,7 +76,7 @@ function clearFilters() {
           v-for="tag in allTags"
           :key="tag"
           :label="tag"
-          :color="selectedTag === tag ? 'amber' : 'neutral'"
+          :color="selectedTag === tag ? 'primary' : 'neutral'"
           :variant="selectedTag === tag ? 'solid' : 'subtle'"
           size="sm"
           class="cursor-pointer"
@@ -89,7 +89,7 @@ function clearFilters() {
         <span class="text-xs text-stone-500">
           Showing {{ filteredPosts.length }} of {{ allPosts?.length ?? 0 }} posts
         </span>
-        <UButton label="Clear filters" variant="link" color="amber" size="xs" @click="clearFilters" />
+        <UButton label="Clear filters" variant="link" color="primary" size="xs" @click="clearFilters" />
       </div>
     </div>
 

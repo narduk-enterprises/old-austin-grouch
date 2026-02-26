@@ -19,7 +19,7 @@
         </p>
       </div>
       <div class="mt-6 flex flex-wrap gap-3">
-        <UButton to="/about" label="Read the Full Manifesto" color="amber" variant="solid" size="md" />
+        <UButton to="/about" label="Read the Full Manifesto" color="primary" variant="solid" size="md" />
         <UButton to="/posts" label="Browse the Archive" color="neutral" variant="outline" size="md" class="text-amber-100 border-amber-100/30 hover:bg-amber-100/10" />
       </div>
     </div>

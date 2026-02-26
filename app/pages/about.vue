@@ -79,7 +79,7 @@ usePageSeo({
 
     <div class="text-center">
       <p class="text-sm text-stone-500 mb-4">Got a gripe? Got a memory? Got a correction?</p>
-      <UButton to="/subscribe" label="Subscribe to the Newsletter" color="amber" size="lg" icon="i-lucide-mail" />
+      <UButton to="/subscribe" label="Subscribe to the Newsletter" color="primary" size="lg" icon="i-lucide-mail" />
     </div>
   </div>
 </template>

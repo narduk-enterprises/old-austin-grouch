@@ -57,7 +57,7 @@ async function copyLink() {
     <UButton
       :icon="copied ? 'i-lucide-check' : 'i-lucide-link'"
       variant="ghost"
-      :color="copied ? 'green' : 'neutral'"
+      :color="copied ? 'success' : 'neutral'"
       size="xs"
       :aria-label="copied ? 'Copied!' : 'Copy link'"
       @click="copyLink"

@@ -31,7 +31,7 @@ async function goToRandom() {
     :loading="loading"
     :size="size || 'sm'"
     :variant="variant || 'soft'"
-    color="amber"
+    color="primary"
     :block="block"
     aria-label="Go to a random post"
     @click="goToRandom"

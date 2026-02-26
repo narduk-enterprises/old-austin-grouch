@@ -38,7 +38,7 @@ function handleSubmit() {
           type="submit"
           label="Subscribe"
           icon="i-lucide-send"
-          color="amber"
+          color="primary"
           size="lg"
         />
       </form>

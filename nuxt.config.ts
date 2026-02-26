@@ -1,22 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/content',
     '@nuxt/ui',
     '@nuxt/fonts',
+    '@nuxt/image',
+    '@nuxt/content',
+    '@nuxtjs/seo',
     '@nuxt/eslint',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/robots',
-    'nuxt-schema-org',
   ],
   css: ['~/assets/css/main.css'],
 
-  compatibilityDate: '2025-02-15',
+  compatibilityDate: '2025-07-15',
 
   devtools: { enabled: true },
 
   future: {
-    compatibilityVersion: 4,
+    compatibilityVersion: 4
   },
 
   fonts: {
@@ -39,104 +38,130 @@ export default defineNuxtConfig({
   },
 
   ui: {
-    colorMode: true,
+    colorMode: true
   },
 
   colorMode: {
-    preference: 'light',
-  },
-
-  vite: {
-    css: {
-      devSourcemap: true,
-    },
-    build: {
-      cssMinify: 'lightningcss',
-    },
+    preference: 'dark'
   },
 
   runtimeConfig: {
+    // Server-only (admin API routes)
+    googleServiceAccountKey: process.env.GSC_SERVICE_ACCOUNT_JSON || '',
+    posthogApiKey: process.env.POSTHOG_PERSONAL_API_KEY || '',
+    gaPropertyId: process.env.GA_PROPERTY_ID || '',
+    posthogProjectId: process.env.POSTHOG_PROJECT_ID || '',
     public: {
-      siteUrl: process.env.SITE_URL || 'https://grouch.austin-texas.net',
-      siteName: 'Old Austin Grouch',
-    },
+      appUrl: process.env.SITE_URL || 'https://grouch.austin-texas.net',
+      appName: process.env.APP_NAME || 'Old Austin Grouch',
+      // Analytics
+      posthogPublicKey: process.env.POSTHOG_PUBLIC_KEY || '',
+      posthogHost: process.env.POSTHOG_HOST || 'https://us.i.posthog.com',
+      gaMeasurementId: process.env.GA_MEASUREMENT_ID || '',
+      posthogProjectId: process.env.POSTHOG_PROJECT_ID || '',
+      // IndexNow
+      indexNowKey: process.env.INDEXNOW_KEY || '',
+    }
   },
+
+  // ─── SEO Configuration (@nuxtjs/seo) ──────────────────────────
+  // This single config block powers sitemap, robots, schema.org,
+  // OG images, and site-wide SEO defaults. Individual pages override
+  // these via the `useSeo()` composable.
 
   site: {
-    url: 'https://grouch.austin-texas.net',
+    url: process.env.SITE_URL || 'https://grouch.austin-texas.net',
     name: 'Old Austin Grouch',
+    description: 'Comedic Austin nostalgia satire. Dry, sharp, hyper-specific cultural commentary from someone who remembers when this town was weird for free.',
+    defaultLocale: 'en',
   },
 
-  sitemap: {
-    sources: ['/api/__sitemap__/urls'],
-  },
-
-  robots: {
-    groups: [
-      {
-        userAgent: ['*'],
-        allow: ['/'],
-      },
-    ],
-    blockNonSeoBots: true,
+  ogImage: {
+    defaults: {
+      component: 'OgImageDefault',
+    },
   },
 
   schemaOrg: {
     identity: {
       type: 'Organization',
       name: 'Old Austin Grouch',
-      url: 'https://grouch.austin-texas.net',
+      url: process.env.SITE_URL || 'https://grouch.austin-texas.net',
       logo: '/img/logo.png',
-      description:
-        'Comedic Austin nostalgia satire. Dry, sharp, hyper-specific cultural commentary from someone who remembers when this town was weird for free.',
     },
   },
+
+  image: {
+    provider: 'cloudflare',
+    cloudflare: {
+      baseURL: process.env.SITE_URL || 'https://grouch.austin-texas.net',
+    },
+  },
+
+  content: {
+    // @nuxt/content v3 — edge-compatible, SQL-based storage
+    build: {
+      markdown: {
+        toc: { depth: 3 },
+        highlight: {
+          langs: ['typescript', 'vue', 'bash', 'json', 'css', 'html'],
+        },
+      },
+    },
+  },
+
+  sitemap: {},
+
+  robots: {
+    groups: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+    ],
+  },
+
+  // ─── Nitro (Cloudflare Workers) ────────────────────────────────
+
 
   nitro: {
-    preset: 'cloudflare_module',
+    preset: 'cloudflare-module',
     esbuild: {
       options: {
-        target: 'esnext',
-      },
+        target: 'esnext'
+      }
     },
-    routeRules: {
-      '/_nuxt/**': {
-        headers: { 'Cache-Control': 'public, max-age=31536000, immutable' },
-      },
+    externals: {
+      inline: ['drizzle-orm']
     },
-  },
-
-  routeRules: {
-    '/': { prerender: true },
-    '/about': { prerender: true },
-    '/subscribe': { prerender: true },
-    '/search': { prerender: true },
-    '/posts': { prerender: true },
-    '/posts/**': { prerender: true },
-    '/series/**': { prerender: true },
+    rollupConfig: {
+      plugins: [
+        {
+          name: 'fix-og-image-mock',
+          resolveId(id: string) {
+            if (id.includes('nuxt-og-image') && id.includes('proxy-cjs')) {
+              return { id: './node_modules/nuxt-og-image/dist/runtime/mock/proxy-cjs.js', external: false }
+            }
+          },
+        },
+      ],
+    },
   },
 
   app: {
     head: {
-      title: 'Old Austin Grouch — Comedic Austin Nostalgia Satire',
       htmlAttrs: { lang: 'en' },
       meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
-        {
-          name: 'description',
-          content:
-            'Comedic Austin nostalgia satire. Dry, sharp, hyper-specific cultural commentary from someone who remembers when this town was weird for free.',
-        },
-        { name: 'theme-color', content: '#78350f' },
-        { name: 'geo.region', content: 'US-TX' },
-        { name: 'geo.placename', content: 'Austin' },
-        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'theme-color', content: '#0a0f1a' },
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/img/logo.png' },
-        { rel: 'apple-touch-icon', href: '/img/logo.png' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/img/logo.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' },
       ],
     },
-    pageTransition: { name: 'page', mode: 'out-in' },
-  },
+    pageTransition: { name: 'page', mode: 'out-in' }
+  }
 })

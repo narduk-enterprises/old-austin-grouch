@@ -4,7 +4,6 @@
 .nuxt
 .nitro
 .cache
-dist
 
 # Node dependencies
 node_modules
@@ -23,5 +22,8 @@ logs
 .env.*
 !.env.example
 
-# Wrangler
-.wrangler
+# Cloudflare
+.wrangler/
+
+# Build artifacts
+*.bak

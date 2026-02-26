@@ -41,7 +41,7 @@ function getPostCount(slug: string): number {
             about what used to be where your condo is now.
           </p>
           <div class="flex flex-wrap gap-3 animate-fade-up-delay-3">
-            <UButton to="/posts" label="Read the Archive" color="amber" size="lg" icon="i-lucide-book-open" />
+            <UButton to="/posts" label="Read the Archive" color="primary" size="lg" icon="i-lucide-book-open" />
             <RandomGrouchButton size="lg" variant="outline" block class="text-amber-100 border-amber-100/30 hover:bg-amber-100/10" />
           </div>
         </div>
