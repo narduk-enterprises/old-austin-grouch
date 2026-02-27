@@ -8,11 +8,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "postinstall": "nuxt prepare && pnpm run build:plugins",
     "typecheck": "npx nuxt typecheck",
     "deploy": "nuxt build && wrangler deploy",
     "generate:favicons": "node scripts/generate-favicons.mjs",
-    "prelint": "test -f .nuxt/eslint.config.mjs || nuxt prepare",
+    "prelint": "(test -f .nuxt/eslint.config.mjs || nuxt prepare) && (test -f eslint-plugin-nuxt-ui/dist/index.js || pnpm run build:plugins)",
     "lint": "eslint .",
     "quality": "pnpm run lint && pnpm run typecheck",
     "db:generate": "drizzle-kit generate",
@@ -23,7 +23,8 @@
     "setup:posthog": "npx jiti tools/setup-analytics.ts posthog",
     "setup:ga": "npx jiti tools/setup-analytics.ts ga",
     "setup:gsc": "npx jiti tools/setup-analytics.ts gsc",
-    "setup:gsc:verify": "npx jiti tools/setup-analytics.ts gsc:verify"
+    "setup:gsc:verify": "npx jiti tools/setup-analytics.ts gsc:verify",
+    "build:plugins": "cd eslint-plugin-nuxt-ui && pnpm run build && cd ../eslint-plugin-nuxt-guardrails && pnpm run build && cd ../tools/eslint-plugin-vue-official-best-practices && pnpm run build"
   },
   "dependencies": {
     "@nuxt/content": "^3.11.2",
