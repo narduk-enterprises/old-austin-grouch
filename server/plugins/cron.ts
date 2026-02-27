@@ -1,7 +1,7 @@
 import { defineNitroPlugin } from 'nitropack/runtime'
 
 export default defineNitroPlugin((nitroApp) => {
-  // @ts-ignore
+  // @ts-expect-error - Cloudflare scheduled hook types are incomplete
   nitroApp.hooks.hook('cloudflare:scheduled', async ({ env }: { event: any, env: any }) => {
     try {
       console.log('Cron triggered. Starting weekly AI blog post generation...')
@@ -122,14 +122,14 @@ readingTime: "3 min read"
           // Convert to base64 using btoa with binary string
           let binary = ''
           for (let i = 0; i < combined.length; i++) {
-            binary += String.fromCharCode(combined[i])
+            binary += String.fromCharCode(combined[i]!)
           }
           imageBase64 = btoa(binary)
         } else if (imageResponse instanceof ArrayBuffer || imageResponse instanceof Uint8Array) {
           const bytes = imageResponse instanceof ArrayBuffer ? new Uint8Array(imageResponse) : imageResponse
           let binary = ''
           for (let i = 0; i < bytes.length; i++) {
-            binary += String.fromCharCode(bytes[i])
+            binary += String.fromCharCode(bytes[i]!)
           }
           imageBase64 = btoa(binary)
         }

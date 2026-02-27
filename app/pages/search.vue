@@ -18,7 +18,7 @@ const results = computed(() => {
   return allPosts.value.filter((post) => {
     const searchable = [
       post.title,
-      post.excerpt,
+      post.summary,
       post.series,
       ...(post.tags ?? []),
     ].join(' ').toLowerCase()
@@ -31,10 +31,10 @@ const hasSearched = computed(() => query.value.trim().length > 0)
 
 <template>
   <div class="max-w-3xl mx-auto">
-    <h1 class="font-display text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mb-2">
+    <h1 class="font-display text-3xl sm:text-4xl font-bold text-primary mb-2">
       Search the Archive
     </h1>
-    <p class="text-stone-600 dark:text-stone-400 mb-8">
+    <p class="text-muted mb-8">
       Find the specific gripe you're looking for. We've got a lot of them.
     </p>
 
@@ -52,7 +52,7 @@ const hasSearched = computed(() => query.value.trim().length > 0)
 
     <!-- Results -->
     <div v-if="hasSearched">
-      <p class="text-sm text-stone-500 mb-6">
+      <p class="text-sm text-muted mb-6">
         {{ results.length }} {{ results.length === 1 ? 'result' : 'results' }} for "{{ query }}"
       </p>
 
@@ -63,7 +63,7 @@ const hasSearched = computed(() => query.value.trim().length > 0)
           :to="post.path"
           class="block group"
         >
-          <div class="flex gap-4 p-4 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800/50 transition-colors">
+          <div class="flex gap-4 p-4 rounded-lg hover:bg-muted dark:hover:bg-muted/50 transition-colors">
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-2 mb-1">
                 <UBadge
@@ -73,27 +73,27 @@ const hasSearched = computed(() => query.value.trim().length > 0)
                   variant="subtle"
                   size="xs"
                 />
-                <span class="text-xs text-stone-400">{{ post.readingTime }}</span>
+                <span class="text-xs text-dimmed">{{ post.readingTime }}</span>
               </div>
-              <h3 class="font-display font-bold text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors truncate">
+              <h3 class="font-display font-bold text-primary group-hover:text-primary dark:group-hover:text-primary transition-colors truncate">
                 {{ post.title }}
               </h3>
-              <p class="text-sm text-stone-500 line-clamp-2 mt-1">{{ post.excerpt }}</p>
+              <p class="text-sm text-muted line-clamp-2 mt-1">{{ post.summary }}</p>
             </div>
           </div>
         </NuxtLink>
       </div>
 
       <div v-else class="text-center py-12">
-        <UIcon name="i-lucide-search-x" class="w-12 h-12 text-stone-300 dark:text-stone-600 mx-auto mb-4" />
-        <p class="text-stone-500">Nothing found. Try another search, or just browse the <NuxtLink to="/posts" class="text-amber-700 dark:text-amber-400 underline">full archive</NuxtLink>.</p>
+        <UIcon name="i-lucide-search-x" class="w-12 h-12 text-dimmed dark:text-muted mx-auto mb-4" />
+        <p class="text-muted">Nothing found. Try another search, or just browse the <NuxtLink to="/posts" class="text-primary underline">full archive</NuxtLink>.</p>
       </div>
     </div>
 
     <!-- Empty state -->
     <div v-else class="text-center py-12">
-      <UIcon name="i-lucide-search" class="w-12 h-12 text-stone-300 dark:text-stone-600 mx-auto mb-4" />
-      <p class="text-stone-500">Start typing to search across all posts, series, and tags.</p>
+      <UIcon name="i-lucide-search" class="w-12 h-12 text-dimmed dark:text-muted mx-auto mb-4" />
+      <p class="text-muted">Start typing to search across all posts, series, and tags.</p>
     </div>
   </div>
 </template>

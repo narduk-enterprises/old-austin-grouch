@@ -28,25 +28,25 @@ function getPostCount(slug: string): number {
 <template>
   <div class="paper-texture min-h-screen">
     <!-- Hero -->
-    <section class="relative overflow-hidden bg-amber-950 text-amber-50">
+    <section class="relative overflow-hidden bg-muted text-primary">
       <div class="grain-overlay absolute inset-0" />
       <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div class="max-w-3xl">
-          <p class="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-4 animate-fade-up">
+          <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-4 animate-fade-up">
             Est. Whenever It Was Still Cheap
           </p>
           <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-up-delay-1">
             We Remember When<br />
-            <span class="text-amber-400">Austin Was Weird</span><br />
+            <span class="text-primary">Austin Was Weird</span><br />
             For Free
           </h1>
-          <p class="text-lg sm:text-xl text-amber-200/80 leading-relaxed max-w-2xl mb-8 animate-fade-up-delay-2">
+          <p class="text-lg sm:text-xl text-primary/80 leading-relaxed max-w-2xl mb-8 animate-fade-up-delay-2">
             Comedic nostalgia satire from someone who's been here long enough to have opinions
             about what used to be where your condo is now.
           </p>
           <div class="flex flex-wrap gap-3 animate-fade-up-delay-3">
             <UButton to="/posts" label="Read the Archive" color="primary" size="lg" icon="i-lucide-book-open" />
-            <RandomGrouchButton size="lg" variant="outline" block class="text-amber-100 border-amber-100/30 hover:bg-amber-100/10" />
+            <RandomGrouchButton size="lg" variant="outline" block class="text-primary border-default0/30 hover:bg-muted0/10" />
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@ function getPostCount(slug: string): number {
     <!-- Latest Posts -->
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
       <div class="flex items-center justify-between mb-8">
-        <h2 class="font-display text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-primary">
           Latest Gripes
         </h2>
         <UButton to="/posts" label="View All" variant="ghost" color="neutral" trailing-icon="i-lucide-arrow-right" />
@@ -86,7 +86,7 @@ function getPostCount(slug: string): number {
 
     <!-- Series -->
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16">
-      <h2 class="font-display text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100 mb-8">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-primary mb-8">
         Featured Series
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -103,10 +103,10 @@ function getPostCount(slug: string): number {
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20">
       <UCard variant="subtle" class="text-center">
         <div class="py-4">
-          <h2 class="font-display text-xl sm:text-2xl font-bold text-stone-900 dark:text-stone-100 mb-2">
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-primary mb-2">
             Get Grouchy in Your Inbox
           </h2>
-          <p class="text-sm text-stone-600 dark:text-stone-400 mb-6 max-w-md mx-auto">
+          <p class="text-sm text-muted mb-6 max-w-md mx-auto">
             New complaints delivered weekly. Unsubscribe when you finally move to Dripping Springs.
           </p>
           <div class="max-w-md mx-auto">

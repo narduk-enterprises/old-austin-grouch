@@ -22,7 +22,7 @@ const formattedDate = computed(() => {
 
 usePageSeo({
   title: `${post.value.title} — Old Austin Grouch`,
-  description: post.value.summary,
+  description: post.value.summary || '',
   image: post.value.ogImage || post.value.heroImage,
   type: 'article',
 })
@@ -70,50 +70,50 @@ const filteredRelated = computed(() =>
     </div>
 
     <!-- Post header -->
-    <header class="mb-8">
+    <div class="mb-8">
       <div class="flex items-center gap-3 mb-4 flex-wrap">
-        <UBadge
-          v-if="seriesInfo"
-          :label="seriesInfo.title"
-          :color="(seriesInfo.color as any)"
-          variant="subtle"
-          size="sm"
-          :to="`/series/${seriesInfo.slug}`"
-        />
-        <span class="text-sm text-stone-500">{{ formattedDate }}</span>
-        <span v-if="post.readingTime" class="text-sm text-stone-400 flex items-center gap-1">
+        <NuxtLink v-if="seriesInfo" :to="`/series/${seriesInfo.slug}`">
+          <UBadge
+            :label="seriesInfo.title"
+            :color="(seriesInfo.color as any)"
+            variant="subtle"
+            size="sm"
+          />
+        </NuxtLink>
+        <span class="text-sm text-muted">{{ formattedDate }}</span>
+        <span v-if="post.readingTime" class="text-sm text-dimmed flex items-center gap-1">
           <UIcon name="i-lucide-clock" class="w-3.5 h-3.5" />
           {{ post.readingTime }}
         </span>
       </div>
 
-      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 dark:text-stone-100 leading-tight mb-4">
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight mb-4">
         {{ post.title }}
       </h1>
 
-      <p class="text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
+      <p class="text-lg text-muted leading-relaxed">
         {{ post.summary }}
       </p>
 
       <!-- Share line callout -->
-      <div v-if="post.shareLine" class="mt-6 p-4 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-lg">
-        <p class="text-sm font-semibold text-amber-900 dark:text-amber-200 italic">
+      <div v-if="post.shareLine" class="mt-6 p-4 bg-muted0/20 border-l-4 border-default0 rounded-r-lg">
+        <p class="text-sm font-semibold text-primary italic">
           "{{ post.shareLine }}"
         </p>
       </div>
-    </header>
+    </div>
 
     <USeparator class="my-6" />
 
     <!-- Post content -->
-    <div class="prose dark:prose-invert prose-stone prose-headings:font-display prose-a:text-amber-700 dark:prose-a:text-amber-400">
+    <div class="prose dark:prose-invert prose-stone prose-headings:font-display prose-a:text-primary dark:prose-a:text-primary">
       <ContentRenderer :value="post" />
     </div>
 
     <USeparator class="my-8" />
 
     <!-- Share + tags -->
-    <footer class="space-y-6">
+    <div class="space-y-6">
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <ShareButtons :title="post.title" :share-line="post.shareLine" />
         <div v-if="post.tags?.length" class="flex flex-wrap gap-2">
@@ -130,7 +130,7 @@ const filteredRelated = computed(() =>
 
       <!-- Related posts -->
       <div v-if="filteredRelated.length" class="mt-12">
-        <h2 class="font-display text-xl font-bold text-stone-900 dark:text-stone-100 mb-6">
+        <h2 class="font-display text-xl font-bold text-primary mb-6">
           More from {{ seriesInfo?.title ?? 'this series' }}
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -147,6 +147,6 @@ const filteredRelated = computed(() =>
           />
         </div>
       </div>
-    </footer>
+    </div>
   </article>
 </template>

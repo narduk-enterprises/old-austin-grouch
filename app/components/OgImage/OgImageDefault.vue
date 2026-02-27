@@ -79,7 +79,7 @@ withDefaults(defineProps<{
       :style="{
         fontSize: '56px',
         fontWeight: '700',
-        color: '#f1f5f9',
+        color: 'var(--color-slate-100)',
         lineHeight: '1.15',
         marginBottom: '16px',
         maxWidth: '900px',
@@ -94,7 +94,7 @@ withDefaults(defineProps<{
       :style="{
         fontSize: '24px',
         fontWeight: '400',
-        color: '#94a3b8',
+        color: 'var(--color-slate-400)',
         lineHeight: '1.5',
         maxWidth: '800px',
       }"
@@ -118,7 +118,7 @@ withDefaults(defineProps<{
           width: '32px',
           height: '32px',
           borderRadius: '8px',
-          background: '#10b981',
+          background: 'var(--color-emerald-500)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -133,7 +133,7 @@ withDefaults(defineProps<{
         :style="{
           fontSize: '18px',
           fontWeight: '600',
-          color: '#64748b',
+          color: 'var(--color-slate-500)',
         }"
       >
         {{ siteName }}

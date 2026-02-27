@@ -21,7 +21,7 @@ const formattedDate = computed(() => {
 
 <template>
   <NuxtLink :to="path" class="block group">
-    <UCard variant="outline" class="h-full transition-all duration-200 group-hover:shadow-md group-hover:border-amber-300 dark:group-hover:border-amber-700 overflow-hidden">
+    <UCard variant="outline" class="h-full transition-all duration-200 group-hover:shadow-md group-hover:border-default0 dark:group-hover:border-default0 overflow-hidden">
       <img
         v-if="heroImage"
         :src="heroImage"
@@ -39,22 +39,22 @@ const formattedDate = computed(() => {
             variant="subtle"
             size="xs"
           />
-          <span class="text-xs text-stone-500 dark:text-stone-400">{{ formattedDate }}</span>
+          <span class="text-xs text-muted">{{ formattedDate }}</span>
         </div>
 
         <!-- Title -->
-        <h3 class="font-display text-lg font-bold text-stone-900 dark:text-stone-100 group-hover:text-amber-800 dark:group-hover:text-amber-400 transition-colors leading-tight">
+        <h3 class="font-display text-lg font-bold text-primary group-hover:text-primary dark:group-hover:text-primary transition-colors leading-tight">
           {{ title }}
         </h3>
 
         <!-- Excerpt -->
-        <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed line-clamp-3">
+        <p class="text-sm text-muted leading-relaxed line-clamp-3">
           {{ summary }}
         </p>
 
         <!-- Meta -->
         <div class="flex items-center gap-3 pt-1">
-          <span v-if="readingTime" class="text-xs text-stone-400 dark:text-stone-500 flex items-center gap-1">
+          <span v-if="readingTime" class="text-xs text-dimmed dark:text-muted flex items-center gap-1">
             <UIcon name="i-lucide-clock" class="w-3 h-3" />
             {{ readingTime }}
           </span>

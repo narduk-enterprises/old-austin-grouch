@@ -58,11 +58,10 @@ interface ArticleOptions {
   author: ArticleAuthor | ArticleAuthor[]
   image?: string | string[]
   section?: string
-  tags?: string[]
 }
 
 export function useArticleSchema(options: ArticleOptions) {
-  const { headline, description, datePublished, dateModified, author, image, section, tags } = options
+  const { headline, description, datePublished, dateModified, author } = options
 
   const authors = Array.isArray(author) ? author : [author]
 

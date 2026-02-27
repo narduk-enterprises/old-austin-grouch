@@ -42,10 +42,10 @@ function clearFilters() {
 <template>
   <div>
     <div class="mb-8">
-      <h1 class="font-display text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mb-2">
+      <h1 class="font-display text-3xl sm:text-4xl font-bold text-primary mb-2">
         All Posts
       </h1>
-      <p class="text-stone-600 dark:text-stone-400">
+      <p class="text-muted">
         Every gripe, ranked by recency. Filter by series or tag if you're picky about your complaints.
       </p>
     </div>
@@ -89,7 +89,7 @@ function clearFilters() {
 
       <!-- Active filters -->
       <div v-if="selectedSeries || selectedTag" class="flex items-center gap-2">
-        <span class="text-xs text-stone-500">
+        <span class="text-xs text-muted">
           Showing {{ filteredPosts.length }} of {{ allPosts?.length ?? 0 }} posts
         </span>
         <UButton label="Clear filters" variant="link" color="primary" size="xs" @click="clearFilters" />
@@ -113,8 +113,8 @@ function clearFilters() {
     </div>
 
     <div v-else class="text-center py-16">
-      <UIcon name="i-lucide-search-x" class="w-12 h-12 text-stone-300 dark:text-stone-600 mx-auto mb-4" />
-      <p class="text-stone-500">No posts match your filters. Even the Grouch has limits.</p>
+      <UIcon name="i-lucide-search-x" class="w-12 h-12 text-dimmed dark:text-muted mx-auto mb-4" />
+      <p class="text-muted">No posts match your filters. Even the Grouch has limits.</p>
     </div>
   </div>
 </template>

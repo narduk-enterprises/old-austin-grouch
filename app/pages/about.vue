@@ -8,11 +8,11 @@ usePageSeo({
 
 <template>
   <div class="max-w-3xl mx-auto">
-    <h1 class="font-display text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mb-6">
+    <h1 class="font-display text-3xl sm:text-4xl font-bold text-primary mb-6">
       About the Grouch
     </h1>
 
-    <div class="prose dark:prose-invert prose-stone prose-headings:font-display prose-a:text-amber-700 dark:prose-a:text-amber-400">
+    <div class="prose dark:prose-invert prose-stone prose-headings:font-display prose-a:text-primary dark:prose-a:text-primary">
       <p class="text-lg leading-relaxed">
         <strong>Old Austin Grouch</strong> is a comedic satire project. Think of it as a love letter
         to Austin, Texas — written in the voice of someone who's watched the city transform from
@@ -78,7 +78,7 @@ usePageSeo({
     <USeparator class="my-10" />
 
     <div class="text-center">
-      <p class="text-sm text-stone-500 mb-4">Got a gripe? Got a memory? Got a correction?</p>
+      <p class="text-sm text-muted mb-4">Got a gripe? Got a memory? Got a correction?</p>
       <UButton to="/subscribe" label="Subscribe to the Newsletter" color="primary" size="lg" icon="i-lucide-mail" />
     </div>
   </div>

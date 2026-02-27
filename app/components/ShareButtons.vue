@@ -33,7 +33,7 @@ async function copyLink() {
 
 <template>
   <div class="flex items-center gap-2">
-    <span class="text-xs text-stone-500 dark:text-stone-400 mr-1">Share:</span>
+    <span class="text-xs text-muted mr-1">Share:</span>
     <UButton
       :to="twitterUrl"
       target="_blank"

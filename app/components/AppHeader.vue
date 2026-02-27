@@ -11,19 +11,19 @@ const mobileMenuOpen = ref(false)
 </script>
 
 <template>
-  <header class="sticky top-0 z-50 bg-stone-50/90 dark:bg-stone-950/90 backdrop-blur-md border-b border-stone-200 dark:border-stone-800">
+  <div class="sticky top-0 z-50 bg-elevated/90 backdrop-blur-md border-b border-default">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center gap-2 group">
           <img src="/img/logo.png" alt="Old Austin Grouch" class="w-9 h-9 rounded-full" />
-          <span class="text-xl sm:text-2xl font-display font-bold text-amber-900 dark:text-amber-400 group-hover:text-amber-700 dark:group-hover:text-amber-300 transition-colors">
+          <span class="text-xl sm:text-2xl font-display font-bold text-primary group-hover:text-primary dark:group-hover:text-primary transition-colors">
             Old Austin Grouch
           </span>
         </NuxtLink>
 
         <!-- Desktop nav -->
-        <nav class="hidden md:flex items-center gap-1">
+        <div class="hidden md:flex items-center gap-1">
           <UButton
             v-for="item in navItems"
             :key="item.to"
@@ -43,7 +43,7 @@ const mobileMenuOpen = ref(false)
             aria-label="Search"
           />
           <RandomGrouchButton size="sm" />
-        </nav>
+        </div>
 
         <!-- Mobile menu button -->
         <div class="flex md:hidden items-center gap-1">
@@ -73,7 +73,7 @@ const mobileMenuOpen = ref(false)
         enter-from-class="opacity-0 -translate-y-2"
         leave-to-class="opacity-0 -translate-y-2"
       >
-        <div v-if="mobileMenuOpen" class="md:hidden pb-4 border-t border-stone-200 dark:border-stone-800 pt-3">
+        <div v-if="mobileMenuOpen" class="md:hidden pb-4 border-t border-default pt-3">
           <div class="flex flex-col gap-1">
             <UButton
               v-for="item in navItems"
@@ -88,7 +88,7 @@ const mobileMenuOpen = ref(false)
               @click="mobileMenuOpen = false"
             />
             <USeparator class="my-2" />
-            <p class="px-3 text-xs font-semibold text-stone-500 uppercase tracking-wider mb-1">Series</p>
+            <p class="px-3 text-xs font-semibold text-muted uppercase tracking-wider mb-1">Series</p>
             <UButton
               v-for="s in seriesList"
               :key="s.slug"
@@ -108,5 +108,5 @@ const mobileMenuOpen = ref(false)
         </div>
       </Transition>
     </div>
-  </header>
+  </div>
 </template>

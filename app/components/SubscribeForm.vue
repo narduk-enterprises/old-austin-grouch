@@ -19,12 +19,12 @@ function handleSubmit() {
       mode="out-in"
     >
       <div v-if="submitted" key="success" class="text-center py-4">
-        <UIcon name="i-lucide-check-circle" class="w-8 h-8 text-green-600 dark:text-green-400 mx-auto mb-2" />
-        <p class="font-display text-lg font-bold text-stone-900 dark:text-stone-100">You're on the list.</p>
-        <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Welcome to the grouchy side. We'll be in touch.</p>
+        <UIcon name="i-lucide-check-circle" class="w-8 h-8 text-primary0 dark:text-primary0 mx-auto mb-2" />
+        <p class="font-display text-lg font-bold text-primary">You're on the list.</p>
+        <p class="text-sm text-muted mt-1">Welcome to the grouchy side. We'll be in touch.</p>
       </div>
 
-      <form v-else key="form" class="flex flex-col sm:flex-row gap-3" @submit.prevent="handleSubmit">
+      <UForm :state="{email}" v-else key="form" class="flex flex-col sm:flex-row gap-3" @submit="handleSubmit">
         <UInput
           v-model="email"
           type="email"
@@ -41,7 +41,7 @@ function handleSubmit() {
           color="primary"
           size="lg"
         />
-      </form>
+      </UForm>
     </Transition>
   </div>
 </template>
