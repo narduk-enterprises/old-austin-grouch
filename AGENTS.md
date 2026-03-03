@@ -1,16 +1,16 @@
 # AGENTS.md — AI Agent Instructions
 
-> **🚨 CRITICAL: DO NOT PUSH TO `loganrenz/nuxt-v4-template` 🚨**
+> **🚨 CRITICAL: DO NOT PUSH TO `narduk-enterprises/nuxt-v4-template` 🚨**
 >
 > This is a **read-only template repository**. Before writing ANY code, you MUST create your own repo:
 >
 > ```bash
-> gh repo create <project-name> --template loganrenz/nuxt-v4-template --private --clone
+> gh repo create <project-name> --template narduk-enterprises/nuxt-v4-template --private --clone
 > cd <project-name>
 > npm install
 > ```
 >
-> **Verify your remote** with `git remote -v` — it must NOT point to `loganrenz/nuxt-v4-template`.
+> **Verify your remote** with `git remote -v` — it must NOT point to `narduk-enterprises/nuxt-v4-template`.
 
 This is a **Nuxt 4 + Nuxt UI 4** template deployed to **Cloudflare Workers** with **D1 SQLite** (Drizzle ORM).
 
@@ -95,7 +95,7 @@ All forms **must** follow these conventions for consistent width, spacing, and s
 
 ## 🚨 CRITICAL RULE: NEVER COMMIT TO THIS REPOSITORY 🚨
 
-If you are an agent building a new project inside a clone of this repository, **DO NOT COMMIT OR PUSH** directly back to `loganrenz/nuxt-v4-template`. You must ensure the user has set up a new remote origin first, or you are working in a detached environment. Accidental commits to the template repo will break it for everyone.
+If you are an agent building a new project inside a clone of this repository, **DO NOT COMMIT OR PUSH** directly back to `narduk-enterprises/nuxt-v4-template`. You must ensure the user has set up a new remote origin first, or you are working in a detached environment. Accidental commits to the template repo will break it for everyone.
 
 ## Testing Infrastructure
 

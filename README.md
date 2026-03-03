@@ -46,7 +46,7 @@ This template strictly follows **Cloudflare Workers** compatibility standards:
 
 ## ⚠️ IMPORTANT: This is a Template Repository
 
-> **DO NOT push changes back to `loganrenz/nuxt-v4-template`.** This repository is a read-only template. Always create your own copy first using one of the methods below.
+> **DO NOT push changes back to `narduk-enterprises/nuxt-v4-template`.** This repository is a read-only template. Always create your own copy first using one of the methods below.
 
 ---
 
@@ -58,7 +58,7 @@ Click the **"Use this template"** button on GitHub, or run:
 
 ```bash
 # Create a new PRIVATE repo from this template using GitHub CLI
-gh repo create my-new-project --template loganrenz/nuxt-v4-template --private --clone
+gh repo create my-new-project --template narduk-enterprises/nuxt-v4-template --private --clone
 cd my-new-project
 npm install
 ```
@@ -67,7 +67,7 @@ npm install
 
 ```bash
 # 1. Clone the template
-git clone https://github.com/loganrenz/nuxt-v4-template.git my-new-project
+git clone https://github.com/narduk-enterprises/nuxt-v4-template.git my-new-project
 cd my-new-project
 
 # 2. Create your own private repo and set it as the new origin
@@ -77,7 +77,7 @@ gh repo create my-new-project --private --source=. --remote=origin --push
 npm install
 ```
 
-> **Never run `git push` while the origin still points to `loganrenz/nuxt-v4-template`.** Verify with `git remote -v` before pushing.
+> **Never run `git push` while the origin still points to `narduk-enterprises/nuxt-v4-template`.** Verify with `git remote -v` before pushing.
 
 ### Local Development
 
@@ -299,17 +299,17 @@ If you are an AI agent analyzing this repository, welcome! This template is desi
 >
 > ```bash
 > # Step 1: Create your own private repo from this template
-> gh repo create <project-name> --template loganrenz/nuxt-v4-template --private --clone
+> gh repo create <project-name> --template narduk-enterprises/nuxt-v4-template --private --clone
 > cd <project-name>
 > npm install
 >
 > # Step 2: Verify your remote does NOT point to the template
 > git remote -v
 > # ✅ Should show: origin  https://github.com/<your-user>/<project-name>.git
-> # ❌ Must NOT show: origin  https://github.com/loganrenz/nuxt-v4-template.git
+> # ❌ Must NOT show: origin  https://github.com/narduk-enterprises/nuxt-v4-template.git
 > ```
 >
-> If you see `loganrenz/nuxt-v4-template` as your origin, **STOP** and fix it before making any commits.
+> If you see `narduk-enterprises/nuxt-v4-template` as your origin, **STOP** and fix it before making any commits.
 
 ### How to Start a New Project from this Template:
 

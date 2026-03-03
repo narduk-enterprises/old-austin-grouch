@@ -24,7 +24,11 @@
     "setup:ga": "npx jiti tools/setup-analytics.ts ga",
     "setup:gsc": "npx jiti tools/setup-analytics.ts gsc",
     "setup:gsc:verify": "npx jiti tools/setup-analytics.ts gsc:verify",
-    "build:plugins": "cd eslint-plugin-nuxt-ui && pnpm run build && cd ../eslint-plugin-nuxt-guardrails && pnpm run build && cd ../tools/eslint-plugin-vue-official-best-practices && pnpm run build"
+    "build:plugins": "cd eslint-plugin-nuxt-ui && pnpm run build && cd ../eslint-plugin-nuxt-guardrails && pnpm run build && cd ../tools/eslint-plugin-vue-official-best-practices && pnpm run build",
+    "predev": "node tools/check-setup.js",
+    "prebuild": "node tools/check-setup.js",
+    "predeploy": "node tools/check-setup.js",
+    "update-layer": "npx tsx tools/update-layer.ts"
   },
   "dependencies": {
     "@nuxt/content": "^3.11.2",
@@ -77,5 +81,6 @@
   },
   "volta": {
     "node": "22.14.0"
-  }
+  },
+  "packageManager": "pnpm@10.28.0"
 }

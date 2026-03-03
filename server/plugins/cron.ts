@@ -142,7 +142,7 @@ readingTime: "3 min read"
       }
 
       // ── Step 3: Upload to GitHub ──
-      const repo = 'loganrenz/old-austin-grouch'
+      const repo = 'narduk-enterprises/old-austin-grouch'
       const ghHeaders = {
         'Authorization': `Bearer ${githubToken}`,
         'Accept': 'application/vnd.github.v3+json',

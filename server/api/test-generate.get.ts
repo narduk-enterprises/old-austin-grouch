@@ -56,7 +56,7 @@ readingTime: "3 min read"
     }
 
     // Prepare GitHub API Commit
-    const repo = 'loganrenz/old-austin-grouch'
+    const repo = 'narduk-enterprises/old-austin-grouch'
     const path = `content/posts/${filename}`
     const url = `https://api.github.com/repos/${repo}/contents/${path}`
 
