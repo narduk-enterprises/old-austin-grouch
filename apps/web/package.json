@@ -1,0 +1,48 @@
+{
+  "name": "web",
+  "type": "module",
+  "private": true,
+  "version": "1.0.2",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "db:migrate": "wrangler d1 execute old-austin-grouch --local --file=drizzle/0000_initial_schema.sql",
+    "db:studio": "drizzle-kit studio",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck",
+    "deploy": "nuxt build && wrangler deploy",
+    "prelint": "test -f .nuxt/eslint.config.mjs || nuxt prepare",
+    "lint": "eslint .",
+    "quality": "pnpm run lint && pnpm run typecheck"
+  },
+  "dependencies": {
+    "@narduk-enterprises/narduk-nuxt-template-layer": "workspace:*",
+    "@narduk/eslint-config": "workspace:*",
+    "drizzle-orm": "^0.45.1",
+    "nuxt": "^4.3.1",
+    "zod": "^4.3.6",
+    "@nuxt/content": "^3.11.2",
+    "better-sqlite3": "^12.6.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "eslint": "^10.0.2",
+    "nitro-cloudflare-dev": "^0.2.2",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18",
+    "vue-tsc": "^3.2.5",
+    "wrangler": "^4.20.0",
+    "@types/node": "^22.15.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.0.0"
+  },
+  "overrides": {
+    "@cloudflare/unenv-preset": "2.12.1",
+    "vite": "npm:rolldown-vite@7.3.1"
+  },
+  "volta": {
+    "node": "22.22.0"
+  }
+}
