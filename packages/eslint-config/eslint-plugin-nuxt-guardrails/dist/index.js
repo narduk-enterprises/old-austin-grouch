@@ -807,9 +807,7 @@ var SCHEMA_COMPOSABLES = /* @__PURE__ */ new Set([
   "useOrganizationSchema",
   "usePersonSchema",
   "useBreadcrumbSchema",
-  "useSchemaOrg",
-  "useLocalBusinessSchema",
-  "useFAQSchema"
+  "useSchemaOrg"
 ]);
 var require_schema_on_pages_default = {
   meta: {

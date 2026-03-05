@@ -76,11 +76,7 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
 
-  ogImage: {
-    defaults: {
-      component: 'OgImageDefault',
-    },
-  },
+  ogImage: {},
 
   schemaOrg: {
     identity: {

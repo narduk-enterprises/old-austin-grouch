@@ -14,6 +14,7 @@ const SCHEMA_COMPOSABLES = new Set([
   'useOrganizationSchema',
   'usePersonSchema',
   'useBreadcrumbSchema',
+  'useSchemaOrg',
 ])
 
 export default {

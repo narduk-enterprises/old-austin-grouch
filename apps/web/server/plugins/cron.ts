@@ -1,18 +1,22 @@
 import { defineNitroPlugin } from 'nitropack/runtime'
 
+interface CloudflareAI {
+  run: (model: string, opts: Record<string, unknown>) => Promise<unknown>
+}
+
 export default defineNitroPlugin((nitroApp) => {
   // @ts-expect-error - Cloudflare scheduled hook types are incomplete
   nitroApp.hooks.hook('cloudflare:scheduled', async ({ env }: { event: unknown, env: Record<string, unknown> }) => {
     try {
       console.log('Cron triggered. Starting weekly AI blog post generation...')
       
-      const githubToken = env.GITHUB_TOKEN || process.env.GITHUB_TOKEN
+      const githubToken = (env.GITHUB_TOKEN as string | undefined) || process.env.GITHUB_TOKEN
       if (!githubToken) {
         console.error('Missing GITHUB_TOKEN environment variable. Aborting.')
         return
       }
 
-      const ai = env.AI
+      const ai = env.AI as CloudflareAI | undefined
       if (!ai) {
         console.error('Missing AI binding. Make sure it is configured in wrangler.json. Aborting.')
         return
@@ -49,7 +53,7 @@ readingTime: "3 min read"
       const textResponse = await ai.run('@cf/meta/llama-3.1-8b-instruct', {
         messages: [{ role: 'user', content: postPrompt }],
         max_tokens: 2500
-      })
+      }) as { response?: string }
 
       const markdownContent = textResponse.response
       if (!markdownContent) {
@@ -85,8 +89,8 @@ readingTime: "3 min read"
       for (const line of lines) {
         const keyMatch = line.match(/^(heroImage|ogImage):/)
         if (keyMatch) {
-          if (seenKeys.has(keyMatch[1])) continue
-          seenKeys.add(keyMatch[1])
+          if (seenKeys.has(keyMatch[1]!)) continue
+          seenKeys.add(keyMatch[1]!)
         }
         dedupedLines.push(line)
       }
