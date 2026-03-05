@@ -5,7 +5,7 @@
  * See: check-seo-compliance workflow.
  */
 
-import type { Rule } from 'eslint';
+import type { Rule } from 'eslint'
 
 export default {
   meta: {
@@ -22,25 +22,25 @@ export default {
     },
   },
   create(context: Rule.RuleContext): Rule.RuleListener {
-    const filename = context.filename ?? (context as any).getFilename?.() ?? '';
-    const normalized = filename.replace(/\\/g, '/');
-    if (!normalized.includes('/app/pages/') || !normalized.endsWith('.vue')) return {};
+    const filename = context.filename ?? (context as any).getFilename?.() ?? ''
+    const normalized = filename.replace(/\\/g, '/')
+    if (!normalized.includes('/app/pages/') || !normalized.endsWith('.vue')) return {}
 
-    let hasUseSeo = false;
+    let hasUseSeo = false
 
     return {
       CallExpression(node: any) {
-        const name = node.callee?.type === 'Identifier' ? node.callee.name : null;
-        if (name === 'useSeo' || name === 'usePageSeo') hasUseSeo = true;
+        const name = node.callee?.type === 'Identifier' ? node.callee.name : null
+        if (name === 'useSeo') hasUseSeo = true
       },
       'Program:exit'(node: any) {
         if (!hasUseSeo) {
           context.report({
             node,
             messageId: 'missingUseSeo',
-          });
+          })
         }
       },
-    };
+    }
   },
-};
+}
