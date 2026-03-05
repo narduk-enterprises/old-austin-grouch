@@ -4,6 +4,12 @@ usePageSeo({
   description: 'The Grouch Manifesto. Who we are, why we complain, and our sincerest disclaimer.',
   type: 'profile',
 })
+
+useWebPageSchema({
+  name: 'About — Old Austin Grouch',
+  description: 'The Grouch Manifesto. Who we are, why we complain, and our sincerest disclaimer.',
+  type: 'AboutPage',
+})
 </script>
 
 <template>

@@ -3,6 +3,11 @@ usePageSeo({
   title: 'Subscribe — Old Austin Grouch',
   description: 'Get the latest gripes delivered to your inbox. Weekly complaints, no spam.',
 })
+
+useWebPageSchema({
+  name: 'Subscribe — Old Austin Grouch',
+  description: 'Get the latest gripes delivered to your inbox. Weekly complaints, no spam.',
+})
 </script>
 
 <template>

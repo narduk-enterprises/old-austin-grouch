@@ -17,6 +17,7 @@ const formattedDate = computed(() => {
   const d = new Date(props.date)
   return d.toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' })
 })
+const displayTags = computed(() => props.tags?.slice(0, 3) ?? [])
 </script>
 
 <template>
@@ -60,7 +61,7 @@ const formattedDate = computed(() => {
           </span>
           <div v-if="tags?.length" class="flex gap-1 flex-wrap">
             <UBadge
-              v-for="tag in tags.slice(0, 3)"
+              v-for="tag in displayTags"
               :key="tag"
               :label="tag"
               color="neutral"

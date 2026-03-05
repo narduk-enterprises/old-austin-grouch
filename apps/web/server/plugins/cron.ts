@@ -2,7 +2,7 @@ import { defineNitroPlugin } from 'nitropack/runtime'
 
 export default defineNitroPlugin((nitroApp) => {
   // @ts-expect-error - Cloudflare scheduled hook types are incomplete
-  nitroApp.hooks.hook('cloudflare:scheduled', async ({ env }: { event: any, env: any }) => {
+  nitroApp.hooks.hook('cloudflare:scheduled', async ({ env }: { event: unknown, env: Record<string, unknown> }) => {
     try {
       console.log('Cron triggered. Starting weekly AI blog post generation...')
       
@@ -61,7 +61,7 @@ readingTime: "3 min read"
       // eslint-disable-next-line regexp/no-super-linear-backtracking -- bounded title extraction
       const titleMatch = markdownContent.match(/title:\s*["']?([^"'\n]*)["']?\n/i)
       const title = titleMatch?.[1] || `Generated Post ${Date.now()}`
-      const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '')
+      const slug = title.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-').replaceAll(/(^-|-$)+/g, '')
       const filename = `${slug}.md`
       const imageFilename = `${slug}.png`
 

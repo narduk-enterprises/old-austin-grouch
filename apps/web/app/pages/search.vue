@@ -6,6 +6,12 @@ usePageSeo({
   description: 'Search through all gripes, complaints, and love letters to old Austin.',
 })
 
+useWebPageSchema({
+  name: 'Search — Old Austin Grouch',
+  description: 'Search through all gripes, complaints, and love letters to old Austin.',
+  type: 'SearchResultsPage',
+})
+
 const query = ref('')
 const { data: allPosts } = await useAsyncData('search-posts', () =>
   queryCollection('posts').order('date', 'DESC').all(),

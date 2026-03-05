@@ -53,7 +53,7 @@ readingTime: "3 min read"
     const titleMatch = markdownContent.match(/title:\s*["']?([^"'\n]*)["']?\n/i)
     let filename = `generated-post-${Date.now()}.md`
     if (titleMatch && titleMatch[1]) {
-       const slug = titleMatch[1].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '')
+       const slug = titleMatch[1].toLowerCase().replaceAll(/[^a-z0-9]+/g, '-').replaceAll(/(^-|-$)+/g, '')
        filename = `${slug}.md`
     }
 
@@ -89,7 +89,7 @@ readingTime: "3 min read"
 
     return { success: true, message: `Successfully committed ${filename}`, filename }
 
-  } catch (error: any) {
-    return { success: false, error: error.message }
+  } catch (error: unknown) {
+    return { success: false, error: error instanceof Error ? error.message : String(error) }
   }
 })

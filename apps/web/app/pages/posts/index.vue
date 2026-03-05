@@ -6,6 +6,12 @@ usePageSeo({
   description: 'Browse every gripe, complaint, and love letter to old Austin. Filter by series or tag.',
 })
 
+useWebPageSchema({
+  name: 'All Posts — Old Austin Grouch',
+  description: 'Browse every gripe, complaint, and love letter to old Austin. Filter by series or tag.',
+  type: 'CollectionPage',
+})
+
 const { data: allPosts } = await useAsyncData('all-posts', () =>
   queryCollection('posts')
     .select('title', 'summary', 'date', 'series', 'path', 'readingTime', 'heroImage', 'tags')
@@ -18,7 +24,11 @@ const selectedTag = ref<string | null>(null)
 
 const allTags = computed(() => {
   const tagSet = new Set<string>()
-  allPosts.value?.forEach(p => p.tags?.forEach((t: string) => tagSet.add(t)))
+  for (const p of allPosts.value ?? []) {
+    for (const t of p.tags ?? []) {
+      tagSet.add(t)
+    }
+  }
   return Array.from(tagSet).sort()
 })
 

@@ -1,6 +1,7 @@
 // deploy-trigger: 2026-03-04T20:40:25Z
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // https://nuxt.com/docs/api/configuration/nuxt-config

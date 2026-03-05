@@ -8,6 +8,11 @@ usePageSeo({
   description: 'Dry, sharp, hyper-specific cultural commentary from someone who remembers when this town was weird for free.',
 })
 
+useWebPageSchema({
+  name: 'Old Austin Grouch — Comedic Austin Nostalgia Satire',
+  description: 'Dry, sharp, hyper-specific cultural commentary from someone who remembers when this town was weird for free.',
+})
+
 const { data: latestPosts } = await useAsyncData('latest-posts', () =>
   queryCollection('posts')
     .select('title', 'summary', 'date', 'series', 'path', 'readingTime', 'heroImage', 'tags')

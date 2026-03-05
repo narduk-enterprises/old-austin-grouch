@@ -15,6 +15,12 @@ usePageSeo({
   image: `/img/series/${slug}.png`,
 })
 
+useWebPageSchema({
+  name: `${seriesInfo.title} — Old Austin Grouch`,
+  description: seriesInfo.description,
+  type: 'CollectionPage',
+})
+
 const { data: posts } = await useAsyncData(`series-${slug}`, () =>
   queryCollection('posts')
     .where('series', '=', slug)
