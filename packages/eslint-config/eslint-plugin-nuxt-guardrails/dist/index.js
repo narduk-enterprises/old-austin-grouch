@@ -751,7 +751,7 @@ var require_use_seo_on_pages_default = {
     return {
       CallExpression(node) {
         const name = node.callee?.type === "Identifier" ? node.callee.name : null;
-        if (name === "useSeo" || name === "usePageSeo") hasUseSeo = true;
+        if (name === "useSeo") hasUseSeo = true;
       },
       "Program:exit"(node) {
         if (!hasUseSeo) {
@@ -806,8 +806,7 @@ var SCHEMA_COMPOSABLES = /* @__PURE__ */ new Set([
   "useProductSchema",
   "useOrganizationSchema",
   "usePersonSchema",
-  "useBreadcrumbSchema",
-  "useSchemaOrg"
+  "useBreadcrumbSchema"
 ]);
 var require_schema_on_pages_default = {
   meta: {
