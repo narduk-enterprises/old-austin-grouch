@@ -151,8 +151,8 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#0a0f1a' },
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       ],
     },
     pageTransition: { name: 'page', mode: 'out-in' }
