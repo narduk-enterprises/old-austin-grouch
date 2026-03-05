@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { SERIES_LIST } from '~/utils/series'
 
-usePageSeo({
+useSeo({
   title: 'All Posts — Old Austin Grouch',
   description: 'Browse every gripe, complaint, and love letter to old Austin. Filter by series or tag.',
 })

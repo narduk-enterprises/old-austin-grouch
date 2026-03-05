@@ -1,5 +1,5 @@
 <script setup lang="ts">
-usePageSeo({
+useSeo({
   title: 'About — Old Austin Grouch',
   description: 'The Grouch Manifesto. Who we are, why we complain, and our sincerest disclaimer.',
   type: 'profile',

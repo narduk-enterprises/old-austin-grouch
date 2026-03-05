@@ -7,7 +7,7 @@ interface CloudflareAI {
 export default defineNitroPlugin((nitroApp) => {
   nitroApp.hooks.hook(
     'cloudflare:scheduled',
-    async (options: any) => {
+    async (options: unknown) => {
       const { env } = options as { env: Record<string, unknown> };
       try {
         console.log('Cron triggered. Starting automated AI blog post generation...');

@@ -9,7 +9,7 @@ if (!seriesInfo) {
   throw createError({ statusCode: 404, statusMessage: 'Series not found' })
 }
 
-usePageSeo({
+useSeo({
   title: `${seriesInfo.title} — Old Austin Grouch`,
   description: seriesInfo.description,
   image: `/img/series/${slug}.png`,

@@ -3,7 +3,7 @@ definePageMeta({ layout: 'home' })
 
 const { seriesList } = useSiteData()
 
-usePageSeo({
+useSeo({
   title: 'Old Austin Grouch — Comedic Austin Nostalgia Satire',
   description: 'Dry, sharp, hyper-specific cultural commentary from someone who remembers when this town was weird for free.',
 })

@@ -20,7 +20,7 @@ const formattedDate = computed(() => {
   return d.toLocaleDateString('en-US', { timeZone: 'UTC', weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
 })
 
-usePageSeo({
+useSeo({
   title: `${post.value.title} — Old Austin Grouch`,
   description: post.value.summary || '',
   image: post.value.ogImage || post.value.heroImage,
@@ -28,20 +28,17 @@ usePageSeo({
 })
 
 // BlogPosting JSON-LD
-useSchemaOrg([
-  {
-    '@type': 'BlogPosting',
+useArticleSchema({
     headline: post.value.title,
     description: post.value.summary,
     datePublished: post.value.date,
     image: post.value.heroImage || '/img/og-default.png',
     author: {
-      '@type': 'Person',
       name: 'The Old Austin Grouch',
       url: 'https://oldaustingrouch.com/about',
     },
-  },
-])
+  }
+)
 
 // Get related posts from the same series
 const { data: relatedPosts } = await useAsyncData(`related-${slug}`, () =>

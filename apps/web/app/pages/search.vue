@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getSeriesBySlug } from '~/utils/series'
 
-usePageSeo({
+useSeo({
   title: 'Search — Old Austin Grouch',
   description: 'Search through all gripes, complaints, and love letters to old Austin.',
 })

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-usePageSeo({
+useSeo({
   title: 'Subscribe — Old Austin Grouch',
   description: 'Get the latest gripes delivered to your inbox. Weekly complaints, no spam.',
 })
