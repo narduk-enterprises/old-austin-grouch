@@ -5,10 +5,10 @@ interface CloudflareAI {
 }
 
 export default defineNitroPlugin((nitroApp) => {
-  // @ts-expect-error - Cloudflare scheduled hook types are incomplete
   nitroApp.hooks.hook(
     'cloudflare:scheduled',
-    async ({ env }: { event: unknown; env: Record<string, unknown> }) => {
+    async (options: any) => {
+      const { env } = options as { env: Record<string, unknown> };
       try {
         console.log('Cron triggered. Starting automated AI blog post generation...');
 
