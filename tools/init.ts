@@ -641,10 +641,10 @@ Deployment is done locally via \`pnpm run ship\` (see AGENTS.md).
   // Note: this file is gitignored and must be recreated by each developer.
   const dopplerYamlPath = path.join(ROOT_DIR, 'doppler.yaml')
   try {
-    await fs.writeFile(dopplerYamlPath, \`setup:\\n  project: \${APP_NAME}\\n  config: dev\\n\`, 'utf-8')
-    console.log(\`  ✅ Created doppler.yaml (project=\${APP_NAME}, config=dev)\`)
+    await fs.writeFile(dopplerYamlPath, `setup:\n  project: ${APP_NAME}\n  config: dev\n`, 'utf-8')
+    console.log(`  ✅ Created doppler.yaml (project=${APP_NAME}, config=dev)`)
   } catch (error: any) {
-    console.warn(\`  ⚠️ Failed to explicitly write doppler.yaml: \${error.message}\`)
+    console.warn(`  ⚠️ Failed to explicitly write doppler.yaml: ${error.message}`)
   }
 
   if (!DOPPLER_AVAILABLE) {
