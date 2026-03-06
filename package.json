@@ -2,7 +2,7 @@
   "name": "old-austin-grouch",
   "type": "module",
   "private": true,
-  "version": "1.1.8",
+  "version": "1.1.9",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
