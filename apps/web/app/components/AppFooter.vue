@@ -20,6 +20,7 @@ const year = new Date().getFullYear()
         <!-- Navigation -->
         <div>
           <h3 class="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Navigate</h3>
+          <!-- eslint-disable-next-line narduk/no-unknown-nuxt-ui-component -- Native HTML list provides semantic item count and navigation structure for screen readers -->
           <ul class="space-y-2">
             <li><NuxtLink to="/posts" class="text-sm text-muted hover:text-primary dark:hover:text-primary transition-colors">All Posts</NuxtLink></li>
             <li><NuxtLink to="/about" class="text-sm text-muted hover:text-primary dark:hover:text-primary transition-colors">About</NuxtLink></li>
@@ -31,6 +32,7 @@ const year = new Date().getFullYear()
         <!-- Series -->
         <div>
           <h3 class="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Series</h3>
+          <!-- eslint-disable-next-line narduk/no-unknown-nuxt-ui-component -- Native HTML list provides semantic item count and navigation structure for screen readers -->
           <ul class="space-y-2">
             <li v-for="s in seriesList" :key="s.slug">
               <NuxtLink :to="`/series/${s.slug}`" class="text-sm text-muted hover:text-primary dark:hover:text-primary transition-colors">

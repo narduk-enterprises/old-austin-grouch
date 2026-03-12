@@ -38,6 +38,7 @@ useWebPageSchema({
       </p>
 
       <h2>What This Site Is</h2>
+      <!-- eslint-disable-next-line narduk/no-unknown-nuxt-ui-component -- Native HTML list required for Tailwind Typography prose bullet styling -->
       <ul>
         <li>Playful cultural commentary on Austin's rapid transformation</li>
         <li>Satire rooted in hyper-specific local knowledge</li>
@@ -46,6 +47,7 @@ useWebPageSchema({
       </ul>
 
       <h2>What This Site Is NOT</h2>
+      <!-- eslint-disable-next-line narduk/no-unknown-nuxt-ui-component -- Native HTML list required for Tailwind Typography prose bullet styling -->
       <ul>
         <li>Hateful or mean-spirited toward any group of people</li>
         <li>A real news source (everything is satire or dramatized)</li>
